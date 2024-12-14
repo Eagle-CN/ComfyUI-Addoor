@@ -10,7 +10,8 @@ class AD_BatchImageLoadFromDir:
             "required": {
                 "Directory": ("STRING", {"default": ""}),
                 "Load_Cap": ("INT", {"default": 100, "min": 1, "max": 1000}),
-                "Skip_Frame": ("INT", {"default": 0, "min": 0, "max": 100})
+                "Skip_Frame": ("INT", {"default": 0, "min": 0, "max": 100}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff})
             }
         }
 

@@ -15,6 +15,7 @@ class AD_AnyFileList:
                 "Filter_By": (["*", "images", "text"],),
                 "Extension": ("STRING", {"default": "*"}),
                 "Deep_Search": ("BOOLEAN", {"default": False}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff})
             }
         }
 
@@ -25,7 +26,7 @@ class AD_AnyFileList:
     OUTPUT_IS_LIST = (False, True, True, True, True, True, False, False)
     CATEGORY = "Addoor"
 
-    def process_files(self, Directory, Load_Cap, Skip_Frame, Filter_By, Extension, Deep_Search):
+    def process_files(self, Directory, Load_Cap, Skip_Frame, Filter_By, Extension, Deep_Search, seed):
         file_extensions = {
             "images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp"],
             "text": [".txt", ".csv", ".md", ".json"],
