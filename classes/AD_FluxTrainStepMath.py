@@ -19,7 +19,6 @@ class AD_FluxTrainStepMath:
     CATEGORY = "Addoor"
 
     def calculate(self, Material_Count, Training_Times_Per_Image, Epoch, equation):
-        # Define allowed operators
         operators = {ast.Add: op.add, ast.Sub: op.sub, ast.Mult: op.mul,
                      ast.Div: op.floordiv, ast.Pow: op.pow, ast.USub: op.neg}
 
@@ -43,13 +42,13 @@ class AD_FluxTrainStepMath:
             return (int(total_steps), int(steps_per_epoch))
         except Exception as e:
             print(f"Error in calculation: {e}")
-            return (0, 0)  # Return default values in case of error
+            return (0, 0)
 
 N_CLASS_MAPPINGS = {
     "AD_FluxTrainStepMath": AD_FluxTrainStepMath,
 }
 
 N_DISPLAY_NAME_MAPPINGS = {
-    "AD_FluxTrainStepMath": "AD Flux Train Step Math",
+    "AD_FluxTrainStepMath": "🌻 Flux Train Step Math",
 }
 

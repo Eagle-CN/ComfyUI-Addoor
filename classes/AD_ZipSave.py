@@ -39,15 +39,13 @@ class AD_ZipSave:
                 for root, dirs, files in os.walk(Input_Directory):
                     for file in files:
                         file_path = os.path.join(root, file)
-                        if file_path != zip_path:  # 避免将zip文件本身添加到压缩包中
+                        if file_path != zip_path:
                             arcname = os.path.relpath(file_path, Input_Directory)
                             zipf.write(file_path, arcname)
 
             end_time = time.time()
             total_time = end_time - start_time
-            
-            # 获取创建的 zip 文件大小
-            zip_size = os.path.getsize(zip_path) / (1024 * 1024)  # 转换为 MB
+            zip_size = os.path.getsize(zip_path) / (1024 * 1024)  # Convert to MB
             
             status = f"Zip file created successfully. Size: {zip_size:.2f}MB, Time taken: {total_time:.2f}s"
             print(status)
@@ -63,6 +61,6 @@ N_CLASS_MAPPINGS = {
 }
 
 N_DISPLAY_NAME_MAPPINGS = {
-    "AD_ZipSave": "AD Zip Save",  # 压缩保存
+    "AD_ZipSave": "🌻 Zip Save",
 }
 

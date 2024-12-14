@@ -1,39 +1,6 @@
 import os
 import csv
 
-def get_text_files(directory):
-    text_extensions = ['.txt', '.csv']
-    file_paths = []
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if any(file.lower().endswith(ext) for ext in text_extensions):
-                file_paths.append(os.path.join(root, file))
-    return sorted(file_paths)
-
-def extract_file_names(file_paths, skip, load):
-    start_index = skip
-    end_index = skip + load
-    subset_file_paths = file_paths[start_index:end_index]
-    return [os.path.splitext(os.path.basename(path))[0] for path in subset_file_paths]
-
-def extract_file_paths(file_paths, skip, load):
-    start_index = skip
-    end_index = skip + load
-    return file_paths[start_index:end_index]
-
-def read_text_file(file_path):
-    try:
-        if file_path.lower().endswith('.csv'):
-            with open(file_path, 'r', newline='', encoding='utf-8') as csvfile:
-                reader = csv.reader(csvfile)
-                return '\n'.join([','.join(row) for row in reader])
-        else:
-            with open(file_path, 'r', encoding='utf-8') as txtfile:
-                return txtfile.read()
-    except Exception as e:
-        print(f"读取文件 '{file_path}' 时出错: {e}")
-        return None
-
 class AD_TextListToString:
     @classmethod
     def INPUT_TYPES(s):
@@ -53,31 +20,43 @@ class AD_TextListToString:
     CATEGORY = "Addoor"
 
     def load_text_files(self, Directory, Load_Cap, Skip_Frame):
-        file_paths = get_text_files(Directory)
+        text_extensions = ['.txt', '.csv']
+        file_paths = []
+        for root, dirs, files in os.walk(Directory):
+            for file in files:
+                if any(file.lower().endswith(ext) for ext in text_extensions):
+                    file_paths.append(os.path.join(root, file))
+        file_paths = sorted(file_paths)[Skip_Frame:Skip_Frame + Load_Cap]
         
-        if not file_paths:
-            return ([], [], [], [], 0, "")
-        
-        valid_file_paths = extract_file_paths(file_paths, Skip_Frame, Load_Cap)
+        file_names = []
         file_contents = []
+        file_names_suffix = []
         merged_content = ""
-        for file_path in valid_file_paths:
-            content = read_text_file(file_path)
-            if content is not None:
+        
+        for file_path in file_paths:
+            try:
+                if file_path.lower().endswith('.csv'):
+                    with open(file_path, 'r', newline='', encoding='utf-8') as csvfile:
+                        content = '\n'.join([','.join(row) for row in csv.reader(csvfile)])
+                else:
+                    with open(file_path, 'r', encoding='utf-8') as txtfile:
+                        content = txtfile.read()
+                
+                file_names.append(os.path.splitext(os.path.basename(file_path))[0])
                 file_contents.append(content)
-                merged_content += content + "\n\n"  # 用两个换行符分隔不同文件的内容
+                file_names_suffix.append(os.path.basename(file_path))
+                merged_content += content + "\n\n"
+            except Exception as e:
+                print(f"Error reading file '{file_path}': {e}")
         
-        file_names_suffix = [os.path.basename(path) for path in valid_file_paths]
-        file_names = extract_file_names(file_paths, Skip_Frame, Load_Cap)
         count = len(file_contents)
-        
-        return (file_names, file_contents, valid_file_paths, file_names_suffix, count, merged_content.strip())
+        return (file_names, file_contents, file_paths, file_names_suffix, count, merged_content.strip())
 
 N_CLASS_MAPPINGS = {
     "AD_TextListToString": AD_TextListToString,
 }
 
 N_DISPLAY_NAME_MAPPINGS = {
-    "AD_TextListToString": "AD Text List To String",  # 文本列表转字符串
+    "AD_TextListToString": "🌻 Text List To String",
 }
 

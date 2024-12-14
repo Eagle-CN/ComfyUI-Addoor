@@ -3,7 +3,6 @@ import json
 import numpy as np
 from PIL import Image
 from PIL.PngImagePlugin import PngInfo
-from comfy.cli_args import args
 import subprocess
 
 class AD_ImageSaver:
@@ -30,8 +29,7 @@ class AD_ImageSaver:
 
     def save_images(self, Images, Directory, Filename_Prefix, Open_Output_Directory, prompt=None, extra_pnginfo=None):
         try:
-            if not os.path.exists(Directory):
-                os.makedirs(Directory)
+            os.makedirs(Directory, exist_ok=True)
 
             saved_paths = []
             for i, image in enumerate(Images):
@@ -39,14 +37,12 @@ class AD_ImageSaver:
                 image = (image * 255).astype(np.uint8)
                 img = Image.fromarray(image)
 
-                metadata = None
-                if not args.disable_metadata:
-                    metadata = PngInfo()
-                    if prompt is not None:
-                        metadata.add_text("prompt", json.dumps(prompt))
-                    if extra_pnginfo is not None:
-                        for x in extra_pnginfo:
-                            metadata.add_text(x, json.dumps(extra_pnginfo[x]))
+                metadata = PngInfo()
+                if prompt is not None:
+                    metadata.add_text("prompt", json.dumps(prompt))
+                if extra_pnginfo is not None:
+                    for x in extra_pnginfo:
+                        metadata.add_text(x, json.dumps(extra_pnginfo[x]))
 
                 file_path = self.get_next_file_path(Directory, Filename_Prefix)
                 img.save(file_path, pnginfo=metadata, compress_level=self.compression)
@@ -67,8 +63,7 @@ class AD_ImageSaver:
     def get_next_file_path(directory, filename_prefix):
         index = 1
         while True:
-            padding = str(index).zfill(4)
-            file_name = f"{filename_prefix}_{padding}.png"
+            file_name = f"{filename_prefix}_{str(index).zfill(4)}.png"
             file_path = os.path.join(directory, file_name)
             if not os.path.exists(file_path):
                 return file_path
@@ -92,6 +87,6 @@ N_CLASS_MAPPINGS = {
 }
 
 N_DISPLAY_NAME_MAPPINGS = {
-    "AD_ImageSaver": "AD Image Saver",  # 图像保存器
+    "AD_ImageSaver": "🌻 Image Saver",
 }
 

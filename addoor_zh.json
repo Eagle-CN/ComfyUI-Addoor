@@ -1,0 +1,139 @@
+{
+    "AD_BatchImageLoadFromDir": {
+        "title": "🌻 批量从目录加载图片",
+        "widgets": {
+            "Directory": "目录",
+            "Load_Cap": "加载上限",
+            "Skip_Frame": "跳过帧数"
+        },
+        "outputs": {
+            "Images": "图像",
+            "Image_Paths": "图像路径",
+            "Image_Names_suffix": "图像名称后缀",
+            "Image_Names": "图像名称",
+            "Count": "数量"
+        }
+    },
+    "AD_DeleteLocalAny": {
+        "title": "🌻 删除本地任意文件",
+        "inputs": {
+            "Any": "任意"
+        },
+        "widgets": {
+            "File_Name": "文件名"
+        },
+        "outputs": {
+            "Tips": "提示",
+            "Deleted_Paths": "已删除路径"
+        }
+    },
+    "AD_TextListToString": {
+        "title": "🌻 文本列表转字符串",
+        "widgets": {
+            "Directory": "目录",
+            "Load_Cap": "加载上限",
+            "Skip_Frame": "跳过帧数"
+        },
+        "outputs": {
+            "File_Names": "文件名",
+            "File_Contents": "文件内容",
+            "File_Paths": "文件路径",
+            "File_Names_Suffix": "文件名后缀",
+            "Count": "数量",
+            "Merged_Content": "合并内容"
+        }
+    },
+    "AD_AnyFileList": {
+        "title": "🌻 任意文件列表",
+        "widgets": {
+            "Directory": "目录",
+            "Load_Cap": "加载上限",
+            "Skip_Frame": "跳过帧数",
+            "Filter_By": "过滤方式",
+            "Extension": "扩展名",
+            "Deep_Search": "深度搜索"
+        },
+        "outputs": {
+            "Directory_Output": "目录输出",
+            "Image_List": "图像列表",
+            "Text_List": "文本列表",
+            "File_Path_List": "文件路径列表",
+            "File_Name_List": "文件名列表",
+            "File_Name_With_Extension_List": "带扩展名的文件名列表",
+            "Total_Files": "文件总数",
+            "Merged_Text": "合并文本"
+        }
+    },
+    "AD_ZipSave": {
+        "title": "🌻 Zip保存",
+        "widgets": {
+            "Input_Directory": "输入目录",
+            "Output_Directory": "输出目录",
+            "Zip_Filename": "Zip文件名"
+        },
+        "outputs": {
+            "Zip_Path": "Zip路径",
+            "Status": "状态"
+        }
+    },
+    "AD_ImageSaver": {
+        "title": "🌻 图像保存器",
+        "inputs": {
+            "Images": "图像"
+        },
+        "widgets": {
+            "Directory": "目录",
+            "Filename_Prefix": "文件名前缀",
+            "Open_Output_Directory": "打开输出目录"
+        },
+        "outputs": {
+            "Output_Directory": "输出目录"
+        }
+    },
+    "AD_FluxTrainStepMath": {
+        "title": "🌻 Flux训练步骤计算",
+        "widgets": {
+            "Material_Count": "材料数量",
+            "Training_Times_Per_Image": "每张图像训练次数",
+            "Epoch": "轮数",
+            "equation": "方程"
+        },
+        "outputs": {
+            "Total_Training_Steps": "总训练步骤",
+            "Steps_Per_Epoch": "每轮步骤"
+        }
+    },
+    "AD_TextSaver": {
+        "title": "🌻 文本保存器",
+        "inputs": {
+            "text": "文本"
+        },
+        "widgets": {
+            "directory": "目录",
+            "filename_prefix": "文件名前缀",
+            "filename_delimiter": "文件名分隔符",
+            "filename_number_padding": "文件名数字填充",
+            "file_extension": "文件扩展名",
+            "encoding": "编码"
+        },
+        "outputs": {
+            "File_Path": "文件路径"
+        }
+    },
+    "AD_PromptReplace": {
+        "title": "🌻 提示词替换",
+        "widgets": {
+            "Content": "内容",
+            "Match": "匹配",
+            "Replace": "替换",
+            "seed": "种子",
+            "Increment": "增量",
+            "Random_Mode": "随机模式"
+        },
+        "outputs": {
+            "Replaced_Text": "替换后的文本",
+            "new_seed": "新种子"
+        }
+    }
+}
+
