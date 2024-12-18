@@ -1,0 +1,7 @@
+name,positive_prompt,negative_prompt
+3d-model,professional 3d model {prompt} . octane render, highly detailed, volumetric, dramatic lighting,ugly, deformed, noisy, low poly, blurry, painting
+analog-film,analog film photo {prompt} . faded film, desaturated, 35mm photo, grainy, vignette, vintage, Kodachrome, Lomography, stained, highly detailed, found footage,painting, drawing, illustration, glitch, deformed, mutated, cross-eyed, ugly, disfigured
+anime,anime artwork {prompt} . anime style, key visual, vibrant, studio anime, highly detailed,photo, deformed, black and white, realism, disfigured, low contrast
+cinematic,cinematic film still {prompt} . shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy,anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured
+comic-book,comic {prompt} . graphic illustration, comic art, graphic novel art, vibrant, highly detailed,photograph, deformed, glitch, noisy, realistic, stock photo
+

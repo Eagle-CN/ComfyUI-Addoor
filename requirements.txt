@@ -1,7 +1,29 @@
+# Core dependencies
 numpy>=1.21.0
-Pillow>=8.3.1
+Pillow>=9.0.0
 torch>=1.9.0
-scikit-image>=0.18.3
-huggingface_hub>=0.10.0
+torchvision>=0.10.0
+
+# Image processing
+scikit-image>=0.18.0
+
+# File handling
+zipfile36>=0.1.3
+
+# Hugging Face integration
+huggingface-hub>=0.10.0
+
+# ComfyUI specific (you may need to adjust these based on ComfyUI's requirements)
 gradio>=3.0.0
+
+# Optional: for advanced image processing (if used in your project)
+opencv-python>=4.5.0
+
+# Optional: for progress bars (if used in your project)
+tqdm>=4.62.0
+
+# Optional: for web requests (if used in your project)
+requests>=2.26.0
+
+# Add any other specific libraries your project uses
 
