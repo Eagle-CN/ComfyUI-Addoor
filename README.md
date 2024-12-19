@@ -33,19 +33,23 @@
 1. 确保你已经安装了ComfyUI。
 2. 克隆本仓库到ComfyUI的`custom_nodes`目录：
 
-\`\`\`sh
+```sh
 cd ComfyUI/custom_nodes
 git clone https://github.com/Eagle-CN/ComfyUI-Addoor.git
-\`\`\`
+```
 
 3. 安装依赖：
 
-\`\`\`sh
+```sh
 cd ComfyUI-Addoor
 pip install -r requirements.txt
-\`\`\`
+```
 
 4. 重启ComfyUI，葵花宝典的节点将出现在节点列表中。
+5. 使用中文本地化：
+   1. 下载 `addoor_zh.json` 文件。
+   2. 将其放置在 `/ComfyUI/custom_nodes/AIGODLIKE-COMFYUI-TRANSLATION/zh-CN/Nodes` 目录下。
+   3. 重启 ComfyUI。
 
 ## 🚀 使用方法
 

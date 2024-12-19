@@ -33,17 +33,17 @@
 1. Make sure you have ComfyUI installed.
 2. Clone this repository into the `custom_nodes` directory of ComfyUI:
 
-\`\`\`sh
+```sh
 cd ComfyUI/custom_nodes
 git clone https://github.com/Eagle-CN/ComfyUI-Addoor.git
-\`\`\`
+```
 
 3. Install the dependencies:
 
-\`\`\`sh
+```sh
 cd ComfyUI-Addoor
 pip install -r requirements.txt
-\`\`\`
+```
 
 4. Restart ComfyUI, and the ComfyUI-Addoor nodes will appear in the node list.
 
