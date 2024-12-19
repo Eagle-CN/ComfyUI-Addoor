@@ -1,7 +1,6 @@
-<br />
 <p align="center">
   <a href="https://github.com/Eagle-CN/ComfyUI-Addoor" target="blank">
-    <h1>🌻</h1>
+    <img src="https://i.ibb.co/6nJzL9n/1.png" alt="Logo" width="156" height="156">
   </a>
   <h2 align="center" style="font-weight: 600">ComfyUI-Addoor</h2>
 
