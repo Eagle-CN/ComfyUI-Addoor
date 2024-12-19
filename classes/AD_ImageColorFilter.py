@@ -23,7 +23,7 @@ class AD_ImageColorFilter:
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "apply_filter"
-    CATEGORY = "Addoor"
+    CATEGORY = "🌻 葵花宝典/实用工具"
 
     def apply_filter(self, image, exposure, clarity, highlights, shadows, contrast, saturation, vibrance, temperature, sharpness):
         # Ensure image is in the correct format

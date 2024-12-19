@@ -1,4 +1,4 @@
-﻿name,prompt,negative_prompt
+name,prompt,negative_prompt
 >>>>>> 常规风格 ,,
 风格: 增强,"breathtaking {prompt} . award-winning, professional, highly detailed","ugly, deformed, noisy, blurry, distorted, grainy"
 风格: 动画,"anime artwork {prompt} . anime style, key visual, vibrant, studio anime, highly detailed","photo, deformed, black and white, realism, disfigured, low contrast"
@@ -789,3 +789,4 @@ Style: Overhead,"overhead shot of {prompt}. Top-down view, unique perspective, r
 配合_活泼的眼睛,"[Expressive eyes, Visible eye whites, Well-defined eyelashes, Authentic eye light reflection:5]","[Dead eyes, Blurry eyes details, Artificial eye light reflection:5]"
 配合_无水印,,"[Any text, Logos, Watermarks, Annotations, Signages, Emojis, Brand insignia, Visible labels, Copyright marks, Typography, Printed text patterns, Lettering, Symbols with text, Any identifiable branding:1]"
 配合_无涩图,Fully clothed,"NSFW, nude or naked or topless"
+

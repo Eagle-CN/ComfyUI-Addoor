@@ -17,7 +17,7 @@ class AD_PromptReplace:
     RETURN_TYPES = ("STRING", "INT")
     RETURN_NAMES = ("Replaced_Text", "new_seed")
     FUNCTION = "replace_prompt"
-    CATEGORY = "Addoor"
+    CATEGORY = "🌻 葵花宝典/实用工具"
 
     def replace_prompt(self, Content: str, Match: str, Replace: str, seed: int, Increment: int, Random_Mode: str):
         # Split the Content and Replace into lines

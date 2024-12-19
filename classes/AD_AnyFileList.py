@@ -24,7 +24,7 @@ class AD_AnyFileList:
     FUNCTION = "process_files"
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (False, True, True, True, True, True, False, False)
-    CATEGORY = "Addoor"
+    CATEGORY = "🌻 葵花宝典/批量操作"
 
     def process_files(self, Directory, Load_Cap, Skip_Frame, Filter_By, Extension, Deep_Search, seed):
         file_extensions = {

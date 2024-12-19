@@ -15,7 +15,7 @@ class AD_DeleteLocalAny:
     RETURN_NAMES = ("Tips", "Deleted_Paths")
     OUTPUT_NODE = True
     FUNCTION = "delete_files"
-    CATEGORY = "Addoor"
+    CATEGORY = "🌻 葵花宝典/批量操作"
 
     def delete_files(self, Any, File_Name):
         if not isinstance(Any, list):

@@ -32,7 +32,7 @@ class AD_HFDownload:
     RETURN_NAMES = ("Download_Path", "Status")
     FUNCTION = "download_from_hf"
     OUTPUT_NODE = True
-    CATEGORY = "Addoor"
+    CATEGORY = "🌻 葵花宝典/实用工具"
 
     def parse_hf_url(self, url):
         """Parse Hugging Face URL to extract repository info."""

@@ -184,6 +184,34 @@
         "outputs": {
             "IMAGE": "处理后的图像"
         }
+    },
+    "AD_CSVPromptStyler": {
+        "title": "🌻 CSV 提示词样式器",
+        "widgets": {
+            "csv_path": "CSV 文件路径",
+            "text_positive": "正面文本",
+            "text_negative": "负面文本",
+            "style": "样式",
+            "log_prompt": "记录提示词"
+        },
+        "outputs": {
+            "styled_positive": "样式化正面文本",
+            "styled_negative": "样式化负面文本",
+            "selected_style": "选中的样式"
+        }
+    },
+    "AD_TxtToCSVCombiner": {
+        "title": "🌻 文本到 CSV 合并器",
+        "widgets": {
+            "input_directory": "输入目录",
+            "output_directory": "输出目录",
+            "output_filename": "输出文件名",
+            "add_header": "添加表头",
+            "sort_by_filename": "按文件名排序（禁用则按数字前缀排序）"
+        },
+        "outputs": {
+            "output_csv_path": "输出 CSV 路径"
+        }
     }
 }
 

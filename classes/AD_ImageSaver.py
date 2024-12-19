@@ -25,7 +25,7 @@ class AD_ImageSaver:
     RETURN_NAMES = ("Output_Directory",)
     FUNCTION = "save_images"
     OUTPUT_NODE = True
-    CATEGORY = "Addoor"
+    CATEGORY = "🌻 葵花宝典/输出保存"
 
     def save_images(self, Images, Directory, Filename_Prefix, Open_Output_Directory, prompt=None, extra_pnginfo=None):
         try:

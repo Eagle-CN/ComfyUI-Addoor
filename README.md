@@ -1,161 +1,143 @@
-# ComfyUI-Addoor
+<br />
+<p align="center">
+  <a href="https://github.com/Eagle-CN/ComfyUI-Addoor" target="blank">
+    <h1>🌻</h1>
+  </a>
+  <h2 align="center" style="font-weight: 600">葵花宝典</h2>
 
-ComfyUI-Addoor is a custom node plugin package for ComfyUI, providing various utility functions for file operations and data processing.
+  <p align="center">
+    ComfyUI的强大插件
+    <br />
+    <a href="https://github.com/Eagle-CN/ComfyUI-Addoor" target="blank"><strong>📘 查看文档</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#%EF%B8%8F-安装" target="blank"><strong>📦️ 下载安装</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://github.com/Eagle-CN/ComfyUI-Addoor/issues" target="blank"><strong>🐛 报告Bug</strong></a>
+    <br />
+    <br />
+  </p>
+</p>
 
-## Chinese Localization
+## ✨ 特性
 
-To use the Chinese localization:
-1. Download the `addoor_zh.json` file.
-2. Place it in the `/ComfyUI/custom_nodes/AIGODLIKE-COMFYUI-TRANSLATION/zh-CN/Nodes` directory.
-3. Restart ComfyUI.
+- 🔄 CSV读取和处理
+- 📁 批量图片加载和文件操作
+- 🗜️ ZIP文件创建
+- 💾 图像和文本保存
+- 🧮 训练步骤计算
+- 🔄 提示词替换和样式化
+- 🌐 Hugging Face模型下载
+- 🎨 图像颜色滤镜
+- 📊 文本到CSV转换
+- ...更多功能正在开发中！
 
-## Features and Usage Notes
+## 📦️ 安装
 
-1. 🌻 CSV Reader (AD_CSVReader)
- - Reads CSV files and outputs their content.
- - Inputs:
-   - file_path: Path to the CSV file.
-   - column_index: Index of the column to read (0 for all columns).
-   - seed: Random seed for row selection.
-   - increment: Increment for row selection.
- - Outputs: File path, seed value, increment value, full content, list of lines, total line count, selected line.
+1. 确保你已经安装了ComfyUI。
+2. 克隆本仓库到ComfyUI的`custom_nodes`目录：
 
-2. 🌻 Batch Image Load From Directory (AD_BatchImageLoadFromDir)
- - Loads multiple images from a specified directory.
- - Inputs:
-   - Directory: Path to the folder containing images.
-   - Load_Cap: Maximum number of images to load.
-   - Skip_Frame: Number of images to skip before starting to load.
-   - seed: Random seed.
- - Outputs: Loaded images, image paths, image names with suffix, image names, and count.
- - Note: Supports various image formats including jpg, jpeg, png, bmp, gif, and webp.
+\`\`\`sh
+cd ComfyUI/custom_nodes
+git clone https://github.com/Eagle-CN/ComfyUI-Addoor.git
+\`\`\`
 
-3. 🌻 Delete Local Any (AD_DeleteLocalAny)
- - Deletes specified files or directories.
- - Inputs:
-   - Any: File or directory path(s) to delete.
-   - File_Name: Optional specific filename to delete within directories.
- - Outputs: Operation status and deleted file paths.
- - Note: Use with caution as deletions are permanent.
+3. 安装依赖：
 
-4. 🌻 Text List To String (AD_TextListToString)
- - Loads text files from a directory and combines their contents.
- - Inputs:
-   - Directory: Path to the folder containing text files.
-   - Load_Cap: Maximum number of files to load.
-   - Skip_Frame: Number of files to skip before starting to load.
-   - seed: Random seed.
- - Outputs: File names, contents, paths, file names with suffix, count, and merged content.
- - Note: Supports txt and csv files.
+\`\`\`sh
+cd ComfyUI-Addoor
+pip install -r requirements.txt
+\`\`\`
 
-5. 🌻 Any File List (AD_AnyFileList)
- - Lists files in a directory with various filtering options.
- - Inputs:
-   - Directory: Path to search for files.
-   - Load_Cap: Maximum number of files to list.
-   - Skip_Frame: Number of files to skip before starting to list.
-   - Filter_By: File type filter (e.g., images, text).
-   - Extension: Specific file extension to filter.
-   - Deep_Search: Whether to search subdirectories.
-   - seed: Random seed.
- - Outputs: Output directory, image list, text list, file path list, file name list, file name with extension list, total file count, and merged text.
- - Note: Versatile node for file management and content extraction.
+4. 重启ComfyUI，葵花宝典的节点将出现在节点列表中。
 
-6. 🌻 Zip Save (AD_ZipSave)
- - Creates a zip archive of a specified directory.
- - Inputs:
-   - Input_Directory: Directory to zip.
-   - Output_Directory: Where to save the zip file.
-   - Zip_Filename: Name for the output zip file.
- - Outputs: Path to the created zip file and operation status.
- - Note: Useful for backing up or sharing multiple files at once.
+## 🚀 使用方法
 
-7. 🌻 Image Saver (AD_ImageSaver)
- - Saves images to a specified directory with customizable naming.
- - Inputs:
-   - Images: Image data to save.
-   - Directory: Where to save the images.
-   - Filename_Prefix: Prefix for the saved image filenames.
-   - Open_Output_Directory: Whether to open the output folder after saving.
- - Outputs: Path to the saved images.
- - Note: Supports metadata saving and automatic file numbering.
+葵花宝典为ComfyUI添加了多个新节点，每个节点都有特定的功能：
 
-8. 🌻 Flux Train Step Math (AD_FluxTrainStepMath)
- - Calculates training steps for machine learning models.
- - Inputs:
-   - Material_Count: Number of training materials.
-   - Training_Times_Per_Image: Number of times to train on each image.
-   - Epoch: Number of epochs for training.
-   - equation: Custom equation for step calculation.
- - Outputs: Total training steps and steps per epoch.
- - Note: Useful for planning and optimizing training processes.
+1. **CSV读取器**：读取和处理CSV文件。
+2. **批量图片加载**：从指定目录批量加载图片。
+3. **文件删除**：删除指定的文件或目录。
+4. **文本列表转换**：将文本文件列表转换为字符串。
+5. **文件列表**：列出目录中的文件，支持多种过滤选项。
+6. **ZIP保存**：创建ZIP压缩文件。
+7. **图像保存器**：保存图像到指定目录。
+8. **训练步骤计算**：计算机器学习模型的训练步骤。
+9. **文本保存器**：保存文本内容到文件。
+10. **提示词替换**：替换文本中的特定内容。
+11. **Hugging Face下载**：从Hugging Face下载模型或数据集。
+12. **图像颜色滤镜**：应用各种颜色调整和滤镜效果。
+13. **CSV提示词样式器**：使用CSV文件中的样式美化提示词。
+14. **文本到CSV合并器**：将多个文本文件合并为一个CSV文件。
 
-9. 🌻 Text Saver (AD_TextSaver)
- - Saves text content to a file with customizable naming and formatting.
- - Inputs:
-   - text: Content to save.
-   - directory: Where to save the text file.
-   - filename_prefix: Prefix for the saved file name.
-   - filename_delimiter: Character to use between prefix and number.
-   - filename_number_padding: Number of digits for file numbering.
-   - file_extension: File extension for the saved file.
-   - encoding: Text encoding (default UTF-8).
- - Outputs: Path to the saved text file.
- - Note: Supports time-based tokens in directory and filename prefix.
+每个节点都可以在ComfyUI的界面中找到，并可以与其他节点连接以创建复杂的工作流。
 
-10. 🌻 Prompt Replace (AD_PromptReplace)
- - Replaces text in a prompt based on specified criteria and random selection.
- - Inputs:
-   - Content: The main text content to be processed.
-   - Match: The text to be replaced.
-   - Replace: The text to replace the matched content.
-   - seed: Random seed for selection.
-   - Increment: Value to increment or decrement the seed.
-   - Random_Mode: Mode for line selection.
- - Outputs: Replaced text and new seed value.
- - Note: Useful for creating variations in prompts or text content with controlled randomness.
+## 📘 节点说明和注意事项
 
-11. 🌻 Hugging Face Download (AD_HFDownload)
- - Downloads models or datasets from Hugging Face.
- - Inputs:
-   - download_url: Download URL.
-   - repo_id: Repository ID.
-   - save_path: Path to save the downloaded content.
-   - resource_type: Type of resource (model or dataset).
-   - use_mirror: Whether to use a mirror site.
-   - create_folder: Whether to create a new folder for the download.
-   - filename: Specific filename to download.
-   - hf_token: Hugging Face token for authentication.
- - Outputs: Download path and status.
- - Note: Supports downloading various resources from Hugging Face.
+1. **CSV读取器 (AD_CSVReader)**
+   - 说明：读取CSV文件并输出其内容。
+   - 注意：支持选择特定列和随机行选择。
 
-12. 🌻 Image Color Filter (AD_ImageColorFilter)
- - Applies various color adjustments and filter effects to images.
- - Inputs:
-   - image: The image to process.
-   - exposure: Exposure adjustment.
-   - clarity: Clarity adjustment.
-   - highlights: Highlights adjustment.
-   - shadows: Shadows adjustment.
-   - contrast: Contrast adjustment.
-   - saturation: Saturation adjustment.
-   - vibrance: Vibrance adjustment.
-   - temperature: Color temperature adjustment.
-   - sharpness: Sharpness adjustment.
- - Outputs: Processed image.
- - Note: Provides comprehensive image color and quality adjustment capabilities.
+2. **批量图片加载 (AD_BatchImageLoadFromDir)**
+   - 说明：从指定目录批量加载图片。
+   - 注意：支持多种图片格式，包括jpg、jpeg、png、bmp、gif和webp。
 
-## Installation
+3. **文件删除 (AD_DeleteLocalAny)**
+   - 说明：删除指定的文件或目录。
+   - 注意：使用时要小心，删除操作是永久性的。
 
-1. Copy the `ComfyUI-Addoor` folder to the `custom_nodes` directory in your ComfyUI installation.
-2. Ensure that the required dependencies are installed (see `requirements.txt`).
-3. Restart ComfyUI.
+4. **文本列表转换 (AD_TextListToString)**
+   - 说明：加载文本文件并合并其内容。
+   - 注意：支持txt和csv文件。
 
-## Usage
+5. **文件列表 (AD_AnyFileList)**
+   - 说明：列出目录中的文件，具有各种过滤选项。
+   - 注意：可用于文件管理和内容提取。
 
-After installation, the new nodes will be available in the ComfyUI interface under the "Addoor" category. Refer to the feature descriptions above for specific usage of each node.
+6. **ZIP保存 (AD_ZipSave)**
+   - 说明：创建指定目录的zip压缩文件。
+   - 注意：适用于备份或一次性共享多个文件。
 
-## License
+7. **图像保存器 (AD_ImageSaver)**
+   - 说明：将图像保存到指定目录，具有可自定义的命名。
+   - 注意：支持元数据保存和自动文件编号。
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+8. **训练步骤计算 (AD_FluxTrainStepMath)**
+   - 说明：计算机器学习模型的训练步骤。
+   - 注意：用于规划和优化训练过程。
+
+9. **文本保存器 (AD_TextSaver)**
+   - 说明：将文本内容保存到文件，具有可自定义的命名和格式。
+   - 注意：支持在目录和文件名前缀中使用基于时间的标记。
+
+10. **提示词替换 (AD_PromptReplace)**
+    - 说明：根据指定条件和随机选择替换提示词中的文本。
+    - 注意：适用于创建提示词或文本内容的变体，具有可控的随机性。
+
+11. **Hugging Face下载 (AD_HFDownload)**
+    - 说明：从Hugging Face下载模型或数据集。
+    - 注意：支持使用镜像站点和身份验证。
+
+12. **图像颜色滤镜 (AD_ImageColorFilter)**
+    - 说明：对图像应用各种颜色调整和滤镜效果。
+    - 注意：提供全面的图像颜色和质量调整功能。
+
+13. **CSV提示词样式器 (AD_CSVPromptStyler)**
+    - 说明：使用CSV文件中定义的样式来美化提示词。
+    - 注意：可以轻松应用预定义的提示词样式。
+
+14. **文本到CSV合并器 (AD_TxtToCSVCombiner)**
+    - 说明：将多个文本文件合并为一个CSV文件。
+    - 注意：支持文件排序和可选的表头添加。
+
+
+## 🤝 贡献
+
+欢迎贡献代码、报告问题或提出新功能建议！请查看我们的[贡献指南](CONTRIBUTING.md)了解更多信息。
+
+## 📜 许可证
+
+本项目采用MIT许可证。详情请参阅[LICENSE](LICENSE)文件。
+
+## 🙏 致谢
+
+- 感谢ComfyUI团队创建了如此强大的框架。
+- 感谢所有为本项目做出贡献的开发者。
 

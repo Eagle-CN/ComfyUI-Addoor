@@ -18,7 +18,7 @@ class AD_TextListToString:
     FUNCTION = "load_text_files"
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True, True, True, True, False, False)
-    CATEGORY = "Addoor"
+    CATEGORY = "🌻 葵花宝典/批量操作"
 
     def load_text_files(self, Directory, Load_Cap, Skip_Frame):
         text_extensions = ['.txt', '.csv']
