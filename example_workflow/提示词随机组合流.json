@@ -1,0 +1,302 @@
+{
+  "last_node_id": 12,
+  "last_link_id": 10,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "AD_PromptReplace",
+      "pos": [
+        13170,
+        1046
+      ],
+      "size": [
+        495.40960693359375,
+        533.950927734375
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Content",
+          "type": "STRING",
+          "link": 5,
+          "widget": {
+            "name": "Content"
+          },
+          "label": "内容"
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 9,
+          "widget": {
+            "name": "seed"
+          },
+          "label": "随机种子"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Replaced_Text",
+          "type": "STRING",
+          "links": [
+            6
+          ],
+          "slot_index": 0,
+          "label": "替换后的文本"
+        },
+        {
+          "name": "new_seed",
+          "type": "INT",
+          "links": null,
+          "label": "新种子值"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AD_PromptReplace"
+      },
+      "widgets_values": [
+        "测试提示词 * 测试一下",
+        "C",
+        "人民大街\n购物商场\n小吃街",
+        791684707521112,
+        "randomize",
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "type": "AD_PromptReplace",
+      "pos": [
+        12641,
+        1049
+      ],
+      "size": [
+        495.40960693359375,
+        533.950927734375
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Content",
+          "type": "STRING",
+          "link": 3,
+          "widget": {
+            "name": "Content"
+          },
+          "label": "内容"
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 8,
+          "widget": {
+            "name": "seed"
+          },
+          "label": "随机种子"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Replaced_Text",
+          "type": "STRING",
+          "links": [
+            5
+          ],
+          "slot_index": 0,
+          "label": "替换后的文本"
+        },
+        {
+          "name": "new_seed",
+          "type": "INT",
+          "links": [
+            9
+          ],
+          "slot_index": 1,
+          "label": "新种子值"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AD_PromptReplace"
+      },
+      "widgets_values": [
+        "测试提示词 * 测试一下",
+        "B",
+        "小明\n小红\n小王",
+        497686319003938,
+        "randomize",
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "type": "AD_PromptReplace",
+      "pos": [
+        12114,
+        1049
+      ],
+      "size": [
+        495.40960693359375,
+        533.950927734375
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "Replaced_Text",
+          "type": "STRING",
+          "links": [
+            3
+          ],
+          "slot_index": 0,
+          "label": "替换后的文本"
+        },
+        {
+          "name": "new_seed",
+          "type": "INT",
+          "links": [
+            8
+          ],
+          "slot_index": 1,
+          "label": "新种子值"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AD_PromptReplace"
+      },
+      "widgets_values": [
+        "这是一个A,穿在B身上，背景是C",
+        "A",
+        "旗袍\n羽绒服\n丁字裤\n马甲\n西服\n夹克",
+        1639036199299,
+        "randomize",
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "ShowText|pysssss",
+      "pos": [
+        13700,
+        1046
+      ],
+      "size": [
+        315,
+        76
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 6,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "这是一个丁字裤,穿在小明身上，背景是人民大街"
+      ]
+    }
+  ],
+  "links": [
+    [
+      3,
+      3,
+      0,
+      5,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      5,
+      0,
+      7,
+      0,
+      "STRING"
+    ],
+    [
+      6,
+      7,
+      0,
+      8,
+      0,
+      "STRING"
+    ],
+    [
+      8,
+      3,
+      1,
+      5,
+      1,
+      "INT"
+    ],
+    [
+      9,
+      5,
+      1,
+      7,
+      1,
+      "INT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8769226950000016,
+      "offset": [
+        -11847.178911274887,
+        -650.6962088207476
+      ]
+    },
+    "linkExtensions": [],
+    "reroutes": [
+      {
+        "id": 1,
+        "pos": [
+          12720.9140625,
+          934.0379028320312
+        ],
+        "linkIds": [
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "parentId": 1,
+        "pos": [
+          12974.36328125,
+          926.3001708984375
+        ],
+        "linkIds": [
+          1
+        ]
+      }
+    ]
+  },
+  "version": 0.4
+}
