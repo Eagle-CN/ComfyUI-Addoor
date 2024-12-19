@@ -1,6 +1,9 @@
 import random
 
 class AD_PromptReplace:
+    def __init__(self):
+        self.current_index = None
+
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -8,9 +11,8 @@ class AD_PromptReplace:
                 "Content": ("STRING", {"default": "", "multiline": True}),
                 "Match": ("STRING", {"default": ""}),
                 "Replace": ("STRING", {"default": "", "multiline": True}),
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "step": 1, "control_after_generate": True}),
-                "Increment": ("INT", {"default": 1, "min": 1, "max": 1000}),
-                "Random_Mode": (["normal", "reverse", "odd_forward", "even_forward", "odd_reverse", "even_reverse"], {"default": "normal"}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
+                "Increment": ("INT", {"default": 1, "min": 0, "max": 1000}),
             }
         }
 
@@ -19,47 +21,44 @@ class AD_PromptReplace:
     FUNCTION = "replace_prompt"
     CATEGORY = "🌻 葵花宝典/实用工具"
 
-    def replace_prompt(self, Content: str, Match: str, Replace: str, seed: int, Increment: int, Random_Mode: str):
-        # Split the Content and Replace into lines
+    def replace_prompt(self, Content: str, Match: str, Replace: str, seed: int, Increment: int):
         content_lines = Content.split('\n')
         replace_lines = Replace.split('\n') if Replace else []
 
-        # Prepare the lines based on the Random_Mode
-        if Random_Mode == "reverse":
-            content_lines = content_lines[::-1]
-            replace_lines = replace_lines[::-1]
-        elif Random_Mode == "odd_forward":
-            content_lines = content_lines[::2]
-            replace_lines = replace_lines[::2]
-        elif Random_Mode == "even_forward":
-            content_lines = content_lines[1::2]
-            replace_lines = replace_lines[1::2]
-        elif Random_Mode == "odd_reverse":
-            content_lines = content_lines[::-1][::2]
-            replace_lines = replace_lines[::-1][::2]
-        elif Random_Mode == "even_reverse":
-            content_lines = content_lines[::-1][1::2]
-            replace_lines = replace_lines[::-1][1::2]
-
-        # Ensure we have at least one line
         if not content_lines:
             content_lines = [""]
         if not replace_lines:
             replace_lines = [""]
 
-        # Select a line based on the seed
-        random.seed(seed)
-        selected_line = content_lines[seed % len(content_lines)]
+        # Initialize current_index if it's None
+        if self.current_index is None:
+            if Increment == 0:
+                # Random starting point
+                random.seed(seed)
+                self.current_index = random.randint(0, len(replace_lines) - 1)
+            else:
+                # Start from the beginning
+                self.current_index = 0
+
+        # Select a line based on increment
+        if Increment == 0:
+            # Random selection using seed
+            random.seed(seed)
+            selected_index = random.randint(0, len(replace_lines) - 1)
+        else:
+            # Sequential selection based on increment
+            selected_index = self.current_index
+            self.current_index = (self.current_index + Increment) % len(replace_lines)
+
+        selected_replace = replace_lines[selected_index]
 
         # Perform text replacement
-        if Match and replace_lines:
-            replace_value = replace_lines[seed % len(replace_lines)]
-            selected_line = selected_line.replace(Match, replace_value)
+        replaced_content = Content.replace(Match, selected_replace) if Match else Content
 
-        # Increment the seed for potential future use
-        new_seed = seed + Increment
+        # Update the seed for the next iteration
+        #new_seed = random.randint(0, 0xffffffffffffffff) if Increment == 0 else seed
 
-        return (selected_line, new_seed)
+        return (replaced_content, seed)
 
 N_CLASS_MAPPINGS = {
     "AD_PromptReplace": AD_PromptReplace,
