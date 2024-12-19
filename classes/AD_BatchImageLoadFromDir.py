@@ -20,7 +20,7 @@ class AD_BatchImageLoadFromDir:
     FUNCTION = "load_images"
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True, True, True, True, False)
-    CATEGORY = "🌻 葵花宝典/批量操作"
+    CATEGORY = "🌻 Addoor/Batch Operations"
 
     def load_images(self, Directory, Load_Cap, Skip_Frame):
         image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.webp']

@@ -18,7 +18,6 @@
 ## ✨ Features
 
 - 🔄 CSV reading and processing
-- 📁 Batch image loading and file operations
 - 🗜️ ZIP file creation
 - 💾 Image and text saving
 - 🧮 Training step calculation
@@ -33,17 +32,17 @@
 1. Make sure you have ComfyUI installed.
 2. Clone this repository into the `custom_nodes` directory of ComfyUI:
 
-```sh
+\`\`\`sh
 cd ComfyUI/custom_nodes
 git clone https://github.com/Eagle-CN/ComfyUI-Addoor.git
-```
+\`\`\`
 
 3. Install the dependencies:
 
-```sh
+\`\`\`sh
 cd ComfyUI-Addoor
 pip install -r requirements.txt
-```
+\`\`\`
 
 4. Restart ComfyUI, and the ComfyUI-Addoor nodes will appear in the node list.
 
@@ -53,18 +52,17 @@ ComfyUI-Addoor adds several new nodes to ComfyUI, each with specific functionali
 
 1. **CSV Reader**: Read and process CSV files.
 2. **Batch Image Load**: Load images in batch from a specified directory.
-3. **Delete Local Any**: Delete specified files or directories.
-4. **Text List To String**: Convert a list of text files to a string.
-5. **Any File List**: List files in a directory with various filtering options.
-6. **Zip Save**: Create ZIP archive files.
-7. **Image Saver**: Save images to a specified directory.
-8. **Flux Train Step Math**: Calculate training steps for machine learning models.
-9. **Text Saver**: Save text content to a file.
-10. **Prompt Replace**: Replace specific content in text.
-11. **Hugging Face Download**: Download models or datasets from Hugging Face.
-12. **Image Color Filter**: Apply various color adjustments and filter effects.
-13. **CSV Prompt Styler**: Style prompts using styles from a CSV file.
-14. **Txt To CSV Combiner**: Combine multiple text files into a single CSV file.
+3. **Text List To String**: Convert a list of text files to a string.
+4. **Any File List**: List files in a directory with various filtering options.
+5. **Zip Save**: Create ZIP archive files.
+6. **Image Saver**: Save images to a specified directory.
+7. **Flux Train Step Math**: Calculate training steps for machine learning models.
+8. **Text Saver**: Save text content to a file.
+9. **Prompt Replace**: Replace specific content in text.
+10. **Hugging Face Download**: Download models or datasets from Hugging Face.
+11. **Image Color Filter**: Apply various color adjustments and filter effects.
+12. **CSV Prompt Styler**: Style prompts using styles from a CSV file.
+13. **Txt To CSV Combiner**: Combine multiple text files into a single CSV file.
 
 Each node can be found in the ComfyUI interface and can be connected with other nodes to create complex workflows.
 
@@ -77,10 +75,6 @@ Each node can be found in the ComfyUI interface and can be connected with other 
 2. **Batch Image Load (AD_BatchImageLoadFromDir)**
    - Description: Loads multiple images from a specified directory.
    - Note: Supports various image formats including jpg, jpeg, png, bmp, gif, and webp.
-
-3. **Delete Local Any (AD_DeleteLocalAny)**
-   - Description: Deletes specified files or directories.
-   - Note: Use with caution as deletions are permanent.
 
 4. **Text List To String (AD_TextListToString)**
    - Description: Loads text files and combines their contents.
