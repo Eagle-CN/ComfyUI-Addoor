@@ -1,9 +1,7 @@
 <br />
-<p align="center">
-  <a href="https://github.com/Eagle-CN/ComfyUI-Addoor" target="blank">
-    <h1>🌻</h1>
-  </a>
-  <h2 align="center" style="font-weight: 600">葵花宝典</h2>
+<h1 align="center" style="font-size: 160px">🌻</h1>
+<h2 align="center" style="font-weight: 600">葵花宝典</h2>
+
 
   <p align="center">
     ComfyUI的强大插件
