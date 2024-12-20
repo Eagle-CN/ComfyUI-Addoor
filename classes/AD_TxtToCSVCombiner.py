@@ -19,7 +19,7 @@ class AD_TxtToCSVCombiner:
     RETURN_NAMES = ("output_csv_path",)
     FUNCTION = "combine_txt_to_csv"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/CSV Controller"
+    CATEGORY = "🌻 葵花宝典/CSV控制器"
 
     def combine_txt_to_csv(self, input_directory, output_directory, output_filename, add_header, sort_by_filename):
         if not os.path.exists(input_directory):

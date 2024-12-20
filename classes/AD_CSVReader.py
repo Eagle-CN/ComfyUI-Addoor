@@ -18,7 +18,7 @@ class AD_CSVReader:
     RETURN_NAMES = ("File_Path", "Seed", "Increment", "Full_Content", "Lines", "Total_Lines", "Selected_Line")
     FUNCTION = "read_csv"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/CSV Controller"
+    CATEGORY = "🌻 葵花宝典/CSV控制器"
     OUTPUT_IS_LIST = (False, False, False, False, True, False, False)
 
     def __init__(self):

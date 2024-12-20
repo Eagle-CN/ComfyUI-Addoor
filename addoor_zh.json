@@ -33,6 +33,17 @@
             "Count": "数量"
         }
     },
+    "AD_DeleteLocalAny": {
+        "title": "🌻 删除本地任意文件",
+        "widgets": {
+            "Any": "任意文件/目录",
+            "File_Name": "文件名"
+        },
+        "outputs": {
+            "Tips": "提示",
+            "Deleted_Paths": "已删除路径"
+        }
+    },
     "AD_TextListToString": {
         "title": "🌻 文本列表转字符串",
         "widgets": {

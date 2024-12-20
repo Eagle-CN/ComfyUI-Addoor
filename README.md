@@ -1,142 +1,146 @@
-\`\`\`markdown
 <p align="center">
-<a href="https://github.com/Eagle-CN/ComfyUI-Addoor" target="blank">
-  <img src="https://i.ibb.co/6nJzL9n/1.png" alt="Logo" width="156" height="156">
-</a>
-<h2 align="center" style="font-weight: 600">ComfyUI-Addoor</h2>
+  <a href="https://github.com/Eagle-CN/ComfyUI-Addoor" target="blank">
+    <img src="https://i.ibb.co/6nJzL9n/1.png" alt="Logo" width="156" height="156">
+  </a>
+  <h2 align="center" style="font-weight: 600">葵花宝典</h2>
 
-<p align="center">
-  Powerful plugin for ComfyUI
-  <br />
-  <a href="https://github.com/Eagle-CN/ComfyUI-Addoor" target="blank"><strong>📘 Explore the docs</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#%EF%B8%8F-installation" target="blank"><strong>📦️ Installation</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://github.com/Eagle-CN/ComfyUI-Addoor/issues" target="blank"><strong>🐛 Report Bug</strong></a>
-  <br />
-  <br />
+  <p align="center">
+    ComfyUI的强大插件
+    <br />
+    <a href="https://github.com/Eagle-CN/ComfyUI-Addoor" target="blank"><strong>📘 查看文档</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#%EF%B8%8F-安装" target="blank"><strong>📦️ 下载安装</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://github.com/Eagle-CN/ComfyUI-Addoor/issues" target="blank"><strong>🐛 报告Bug</strong></a>
+    <br />
+    <br />
+  </p>
 </p>
-</p>
 
-## ✨ Features
+## ✨ 特性
 
-- 🔄 CSV reading and processing
-- 📁 Batch image loading and file operations
-- 🗜️ ZIP file creation
-- 💾 Image and text saving
-- 🧮 Training step calculation
-- 🔄 Prompt replacement and styling
-- 🌐 Hugging Face model downloading
-- 🎨 Image color filtering
-- 📊 Text to CSV conversion
-- ...and more features in development!
+- 🔄 CSV读取和处理
+- 📁 批量图片加载和文件操作
+- 🗜️ ZIP文件创建
+- 💾 图像和文本保存
+- 🧮 训练步骤计算
+- 🔄 提示词替换和样式化
+- 🌐 Hugging Face模型下载
+- 🎨 图像颜色滤镜
+- 📊 文本到CSV转换
+- ...更多功能正在开发中！
 
-## 📦️ Installation
+## 📦️ 安装
 
-1. Make sure you have ComfyUI installed.
-2. Clone this repository into the `custom_nodes` directory of ComfyUI:
+1. 确保你已经安装了ComfyUI。
+2. 克隆本仓库到ComfyUI的`custom_nodes`目录：
 
-\`\`\`sh
+```sh
 cd ComfyUI/custom_nodes
 git clone https://github.com/Eagle-CN/ComfyUI-Addoor.git
-\`\`\`
+```
 
-3. Install the dependencies:
+3. 安装依赖：
 
-\`\`\`sh
+```sh
 cd ComfyUI-Addoor
 pip install -r requirements.txt
-\`\`\`
+```
 
-4. Restart ComfyUI, and the ComfyUI-Addoor nodes will appear in the node list.
-5. For Chinese localization:
-  1. Download the `addoor_zh.json` file.
-  2. Place it in the `/ComfyUI/custom_nodes/AIGODLIKE-COMFYUI-TRANSLATION/zh-CN/Nodes` directory.
-  3. Restart ComfyUI.
+4. 重启ComfyUI，葵花宝典的节点将出现在节点列表中。
+5. 使用中文本地化：
+   1. 下载 `addoor_zh.json` 文件。
+   2. 将其放置在 `/ComfyUI/custom_nodes/AIGODLIKE-COMFYUI-TRANSLATION/zh-CN/Nodes` 目录下。
+   3. 重启 ComfyUI。
 
-## 🚀 Usage
+## 🚀 使用方法
 
-ComfyUI-Addoor adds several new nodes to ComfyUI, each with specific functionality:
+葵花宝典为ComfyUI添加了多个新节点，每个节点都有特定的功能：
 
-1. **CSV Reader**: Read and process CSV files.
-2. **Batch Image Load**: Load images in batch from a specified directory.
-3. **Text List To String**: Convert a list of text files to a string.
-4. **Any File List**: List files in a directory with various filtering options.
-5. **Zip Save**: Create ZIP archive files.
-6. **Image Saver**: Save images to a specified directory.
-7. **Flux Train Step Math**: Calculate training steps for machine learning models.
-8. **Text Saver**: Save text content to a file.
-9. **Prompt Replace**: Replace specific content in text.
-10. **Hugging Face Download**: Download models or datasets from Hugging Face.
-11. **Image Color Filter**: Apply various color adjustments and filter effects.
-12. **CSV Prompt Styler**: Style prompts using styles from a CSV file.
-13. **Txt To CSV Combiner**: Combine multiple text files into a single CSV file.
+1. **CSV读取器**：读取和处理CSV文件。
+2. **批量图片加载**：从指定目录批量加载图片。
+3. **文件删除**：删除指定的文件或目录。
+4. **文本列表转换**：将文本文件列表转换为字符串。
+5. **文件列表**：列出目录中的文件，支持多种过滤选项。
+6. **ZIP保存**：创建ZIP压缩文件。
+7. **图像保存器**：保存图像到指定目录。
+8. **训练步骤计算**：计算机器学习模型的训练步骤。
+9. **文本保存器**：保存文本内容到文件。
+10. **提示词替换**：替换文本中的特定内容。
+11. **Hugging Face下载**：从Hugging Face下载模型或数据集。
+12. **图像颜色滤镜**：应用各种颜色调整和滤镜效果。
+13. **CSV提示词样式器**：使用CSV文件中的样式美化提示词。
+14. **文本到CSV合并器**：将多个文本文件合并为一个CSV文件。
 
-Each node can be found in the ComfyUI interface and can be connected with other nodes to create complex workflows.
+每个节点都可以在ComfyUI的界面中找到，并可以与其他节点连接以创建复杂的工作流。
 
-## 📘 Node Descriptions and Usage Notes
+## 📘 节点说明和注意事项
 
-1. **CSV Reader (AD_CSVReader)**
-  - Description: Reads CSV files and outputs their content.
-  - Note: Supports selecting specific columns and random row selection.
+1. **CSV读取器 (AD_CSVReader)**
+   - 说明：读取CSV文件并输出其内容。
+   - 注意：支持选择特定列和随机行选择。
 
-2. **Batch Image Load (AD_BatchImageLoadFromDir)**
-  - Description: Loads multiple images from a specified directory.
-  - Note: Supports various image formats including jpg, jpeg, png, bmp, gif, and webp.
+2. **批量图片加载 (AD_BatchImageLoadFromDir)**
+   - 说明：从指定目录批量加载图片。
+   - 注意：支持多种图片格式，包括jpg、jpeg、png、bmp、gif和webp。
 
-3. **Text List To String (AD_TextListToString)**
-  - Description: Loads text files and combines their contents.
-  - Note: Supports txt and csv files.
+3. **文件删除 (AD_DeleteLocalAny)**
+   - 说明：删除指定的文件或目录。
+   - 注意：使用时要小心，删除操作是永久性的。
 
-4. **Any File List (AD_AnyFileList)**
-  - Description: Lists files in a directory with various filtering options.
-  - Note: Useful for file management and content extraction.
+4. **文本列表转换 (AD_TextListToString)**
+   - 说明：加载文本文件并合并其内容。
+   - 注意：支持txt和csv文件。
 
-5. **Zip Save (AD_ZipSave)**
-  - Description: Creates a zip archive of a specified directory.
-  - Note: Useful for backing up or sharing multiple files at once.
+5. **文件列表 (AD_AnyFileList)**
+   - 说明：列出目录中的文件，具有各种过滤选项。
+   - 注意：可用于文件管理和内容提取。
 
-6. **Image Saver (AD_ImageSaver)**
-  - Description: Saves images to a specified directory with customizable naming.
-  - Note: Supports metadata saving and automatic file numbering.
+6. **ZIP保存 (AD_ZipSave)**
+   - 说明：创建指定目录的zip压缩文件。
+   - 注意：适用于备份或一次性共享多个文件。
 
-7. **Flux Train Step Math (AD_FluxTrainStepMath)**
-  - Description: Calculates training steps for machine learning models.
-  - Note: Useful for planning and optimizing training processes.
+7. **图像保存器 (AD_ImageSaver)**
+   - 说明：将图像保存到指定目录，具有可自定义的命名。
+   - 注意：支持元数据保存和自动文件编号。
 
-8. **Text Saver (AD_TextSaver)**
-  - Description: Saves text content to a file with customizable naming and formatting.
-  - Note: Supports time-based tokens in directory and filename prefix.
+8. **训练步骤计算 (AD_FluxTrainStepMath)**
+   - 说明：计算机器学习模型的训练步骤。
+   - 注意：用于规划和优化训练过程。
 
-9. **Prompt Replace (AD_PromptReplace)**
-   - Description: Replaces text in a prompt based on specified criteria and random selection.
-   - Note: Useful for creating variations in prompts or text content with controlled randomness.
+9. **文本保存器 (AD_TextSaver)**
+   - 说明：将文本内容保存到文件，具有可自定义的命名和格式。
+   - 注意：支持在目录和文件名前缀中使用基于时间的标记。
 
-10. **Hugging Face Download (AD_HFDownload)**
-   - Description: Downloads models or datasets from Hugging Face.
-   - Note: Supports using mirror sites and authentication.
+10. **提示词替换 (AD_PromptReplace)**
+    - 说明：根据指定条件和随机选择替换提示词中的文本。
+    - 注意：适用于创建提示词或文本内容的变体，具有可控的随机性。
 
-11. **Image Color Filter (AD_ImageColorFilter)**
-   - Description: Applies various color adjustments and filter effects to images.
-   - Note: Provides comprehensive image color and quality adjustment capabilities.
+11. **Hugging Face下载 (AD_HFDownload)**
+    - 说明：从Hugging Face下载模型或数据集。
+    - 注意：支持使用镜像站点和身份验证。
 
-12. **CSV Prompt Styler (AD_CSVPromptStyler)**
-   - Description: Styles prompts using styles defined in a CSV file.
-   - Note: Allows easy application of predefined prompt styles.
+12. **图像颜色滤镜 (AD_ImageColorFilter)**
+    - 说明：对图像应用各种颜色调整和滤镜效果。
+    - 注意：提供全面的图像颜色和质量调整功能。
 
-13. **Txt To CSV Combiner (AD_TxtToCSVCombiner)**
-   - Description: Combines multiple text files into a single CSV file.
-   - Note: Supports file sorting and optional header addition.
+13. **CSV提示词样式器 (AD_CSVPromptStyler)**
+    - 说明：使用CSV文件中定义的样式来美化提示词。
+    - 注意：可以轻松应用预定义的提示词样式。
 
-## 🤝 Contributing
+14. **文本到CSV合并器 (AD_TxtToCSVCombiner)**
+    - 说明：将多个文本文件合并为一个CSV文件。
+    - 注意：支持文件排序和可选的表头添加。
 
-Contributions, issues, and feature requests are welcome! Please check our [Contributing Guide](CONTRIBUTING.md) for more information.
 
-## 📜 License
+## 🤝 贡献
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+欢迎贡献代码、报告问题或提出新功能建议！请查看我们的[贡献指南](CONTRIBUTING.md)了解更多信息。
 
-## 🙏 Acknowledgements
+## 📜 许可证
 
-- Thanks to the ComfyUI team for creating such a powerful framework.
-- Thanks to all the developers who have contributed to this project.
-\`\`\`
+本项目采用MIT许可证。详情请参阅[LICENSE](LICENSE)文件。
+
+## 🙏 致谢
+
+- 感谢ComfyUI团队创建了如此强大的框架。
+- 感谢所有为本项目做出贡献的开发者。
 

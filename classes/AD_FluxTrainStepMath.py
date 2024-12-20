@@ -16,7 +16,7 @@ class AD_FluxTrainStepMath:
     RETURN_TYPES = ("INT", "INT")
     RETURN_NAMES = ("Total_Training_Steps", "Steps_Per_Epoch")
     FUNCTION = "calculate"
-    CATEGORY = "🌻 Addoor/Utilities"
+    CATEGORY = "🌻 葵花宝典/实用工具"
 
     def calculate(self, Material_Count, Training_Times_Per_Image, Epoch, equation):
         operators = {ast.Add: op.add, ast.Sub: op.sub, ast.Mult: op.mul,

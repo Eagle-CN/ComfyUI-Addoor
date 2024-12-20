@@ -24,7 +24,7 @@ class AD_CSVPromptStyler:
     RETURN_NAMES = ("styled_positive", "styled_negative", "selected_style")
     FUNCTION = "apply_style"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/CSV Controller"
+    CATEGORY = "🌻 葵花宝典/CSV控制器"
 
     @staticmethod
     def get_styles(csv_path):
