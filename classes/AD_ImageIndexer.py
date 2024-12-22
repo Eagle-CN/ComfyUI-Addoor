@@ -53,11 +53,11 @@ class AD_ImageIndexer:
         selected_image = images[selected_index]
         return (selected_image, selected_index, total_images)
 
-NODE_CLASS_MAPPINGS = {
+N_CLASS_MAPPINGS = {
     "AD_ImageIndexer": AD_ImageIndexer,
 }
 
-NODE_DISPLAY_NAME_MAPPINGS = {
+N_DISPLAY_NAME_MAPPINGS = {
     "AD_ImageIndexer": "🌻 Image Indexer",
 }
 
