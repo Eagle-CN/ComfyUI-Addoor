@@ -17,7 +17,7 @@ class AD_ImageIndexer:
     RETURN_TYPES = ("IMAGE", "INT", "INT")
     RETURN_NAMES = ("image", "current_index", "total_images")
     FUNCTION = "index_image"
-    CATEGORY = "🌻 葵花宝典/Image"
+    CATEGORY = "🌻 Addoor/Util"
     INPUT_IS_LIST = True
 
     def index_image(self, images, increment, seed):

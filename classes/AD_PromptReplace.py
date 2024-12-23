@@ -19,7 +19,7 @@ class AD_PromptReplace:
     RETURN_TYPES = ("STRING", "INT")
     RETURN_NAMES = ("Replaced_Text", "new_seed")
     FUNCTION = "replace_prompt"
-    CATEGORY = "🌻 葵花宝典/实用工具"
+    CATEGORY = "🌻 Addoor/Util"
 
     def replace_prompt(self, Content: str, Match: str, Replace: str, seed: int, Increment: int):
         content_lines = Content.split('\n')

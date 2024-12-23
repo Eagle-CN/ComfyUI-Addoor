@@ -24,7 +24,7 @@ class AD_CSVTranslator:
     RETURN_NAMES = ("updated_csv_path", "seed")
     FUNCTION = "translate_csv"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 葵花宝典/CSV控制器"
+    CATEGORY = "🌻 Addoor/CSV Controller"
 
     def translate_csv(self, csv_path, source_column, target_column, source_lang, target_lang, translate_first_row, seed):
         if not os.path.exists(csv_path):

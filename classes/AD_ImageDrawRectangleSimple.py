@@ -106,7 +106,7 @@ class AD_ImageDrawRectangleSimple:
     RETURN_TYPES = ("IMAGE", "MASK")
     RETURN_NAMES = ("IMAGE", "MASK")
     FUNCTION = "node"
-    CATEGORY = "🌻 葵花宝典/Image"
+    CATEGORY = "🌻 Addoor/Util"
 
     def node(
             self,

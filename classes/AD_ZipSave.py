@@ -17,7 +17,7 @@ class AD_ZipSave:
     RETURN_NAMES = ("Zip_Path", "Status")
     FUNCTION = "zip_and_save"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 葵花宝典/输出保存"
+    CATEGORY = "🌻 Addoor/Save Output"
 
     def zip_and_save(self, Input_Directory: str, Output_Directory: str, Zip_Filename: str) -> tuple[str, str]:
         if not os.path.exists(Input_Directory):
