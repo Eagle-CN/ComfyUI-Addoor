@@ -162,5 +162,8 @@ pip install -r requirements.txt
 - 感谢ComfyUI团队创建了如此强大的框架。
 - 感谢所有为本项目做出贡献的开发者。
 
-yuan
 
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Eagle-CN/ComfyUI-Addoor&type=Date)](https://star-history.com/#Eagle-CN/ComfyUI-Addoor&Date)
