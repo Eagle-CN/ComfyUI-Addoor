@@ -23,7 +23,7 @@ class AD_TextSaver:
     RETURN_NAMES = ("File_Path",)
     FUNCTION = "save_text_file"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/Save Output"
+    CATEGORY = "🌻 Addoor/Utilities"
 
     def save_text_file(self, text, directory, filename_prefix='ComfyUI', filename_delimiter='_', filename_number_padding=4, file_extension='.txt', encoding='utf-8'):
         directory = self.parse_tokens(directory)
@@ -66,12 +66,4 @@ class AD_TextSaver:
             current_time = datetime.now().strftime(time_format)
             string = string.replace(time_token.group(0), current_time)
         return string
-
-N_CLASS_MAPPINGS = {
-    "AD_TextSaver": AD_TextSaver,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_TextSaver": "🌻 Text Saver",
-}
 

@@ -20,7 +20,7 @@ class AD_BatchImageLoadFromDir:
     FUNCTION = "load_images"
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True, True, True, True, False)
-    CATEGORY = "🌻 Addoor/Batch Operation"
+    CATEGORY = "🌻 Addoor/Batch"
 
     def load_images(self, Directory, Load_Cap, Skip_Frame):
         image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.webp']
@@ -49,12 +49,4 @@ class AD_BatchImageLoadFromDir:
         
         count = len(images)
         return (images, image_paths, image_names_suffix, image_names, count)
-
-N_CLASS_MAPPINGS = {
-    "AD_BatchImageLoadFromDir": AD_BatchImageLoadFromDir,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_BatchImageLoadFromDir": "🌻 Batch Image Load From Directory",
-}
 

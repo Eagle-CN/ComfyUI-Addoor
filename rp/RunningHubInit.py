@@ -13,7 +13,7 @@ class RunningHubInitNode:
     
     RETURN_TYPES = ("STRING",)
     FUNCTION = "initialize"
-    CATEGORY = "🌻 葵花宝典/RHAPI"
+    CATEGORY = "🌻 Addoor/RHAPI"
     
     def initialize(self, api_key: str):
         if not validate_api_key(api_key):

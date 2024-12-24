@@ -18,7 +18,7 @@ class AD_CSVReader:
     RETURN_NAMES = ("File_Path", "Seed", "Increment", "Full_Content", "Lines", "Total_Lines", "Selected_Line")
     FUNCTION = "read_csv"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/CSV Controller"
+    CATEGORY = "🌻 Addoor/CSV"
     OUTPUT_IS_LIST = (False, False, False, False, True, False, False)
 
     def __init__(self):
@@ -71,12 +71,4 @@ class AD_CSVReader:
 
         except Exception as e:
             return file_path, seed, increment, f"Error reading CSV file: {str(e)}", [], 0, ""
-
-N_CLASS_MAPPINGS = {
-    "AD_CSVReader": AD_CSVReader,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_CSVReader": "🌻 CSV Reader",
-}
 

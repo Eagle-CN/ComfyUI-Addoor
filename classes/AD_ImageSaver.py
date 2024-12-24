@@ -25,7 +25,7 @@ class AD_ImageSaver:
     RETURN_NAMES = ("Output_Directory",)
     FUNCTION = "save_images"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/Save Output"
+    CATEGORY = "🌻 Addoor/Image"
 
     def save_images(self, Images, Directory, Filename_Prefix, Open_Output_Directory, prompt=None, extra_pnginfo=None):
         try:
@@ -81,12 +81,4 @@ class AD_ImageSaver:
                     subprocess.call(['xdg-open', path])  # Linux
                 except:
                     print(f"Could not open directory: {path}")
-
-N_CLASS_MAPPINGS = {
-    "AD_ImageSaver": AD_ImageSaver,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_ImageSaver": "🌻 Image Saver",
-}
 

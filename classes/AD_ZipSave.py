@@ -17,7 +17,7 @@ class AD_ZipSave:
     RETURN_NAMES = ("Zip_Path", "Status")
     FUNCTION = "zip_and_save"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/Save Output"
+    CATEGORY = "🌻 Addoor/Utilities"
 
     def zip_and_save(self, Input_Directory: str, Output_Directory: str, Zip_Filename: str) -> tuple[str, str]:
         if not os.path.exists(Input_Directory):
@@ -55,12 +55,4 @@ class AD_ZipSave:
             error_message = f"Error creating zip file: {str(e)}"
             print(error_message)
             return ("", error_message)
-
-N_CLASS_MAPPINGS = {
-    "AD_ZipSave": AD_ZipSave,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_ZipSave": "🌻 Zip Save",
-}
 

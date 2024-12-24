@@ -24,7 +24,7 @@ class AD_CSVTranslator:
     RETURN_NAMES = ("updated_csv_path", "seed")
     FUNCTION = "translate_csv"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/CSV Controller"
+    CATEGORY = "🌻 Addoor/CSV"
 
     def translate_csv(self, csv_path, source_column, target_column, source_lang, target_lang, translate_first_row, seed):
         if not os.path.exists(csv_path):
@@ -104,12 +104,4 @@ class AD_CSVTranslator:
             if hasattr(e, 'response') and e.response is not None:
                 print(f"Error response: {e.response.text}")
             return text  # Return original text if translation fails
-
-N_CLASS_MAPPINGS = {
-    "AD_CSVTranslator": AD_CSVTranslator,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_CSVTranslator": "🌻 CSV Translator",
-}
 

@@ -32,7 +32,7 @@ class AD_HFDownload:
     RETURN_NAMES = ("Download_Path", "Status")
     FUNCTION = "download_from_hf"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/Util"
+    CATEGORY = "🌻 Addoor/Utilities"
 
     def parse_hf_url(self, url):
         """Parse Hugging Face URL to extract repository info."""
@@ -172,12 +172,4 @@ class AD_HFDownload:
                 return "", f"Error: An HTTP error occurred without a response. Details: {str(e)}"
         except Exception as e:
             return "", f"Error: {str(e)}"
-
-N_CLASS_MAPPINGS = {
-    "AD_HFDownload": AD_HFDownload,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_HFDownload": "🌻 Hugging Face Download",
-}
 

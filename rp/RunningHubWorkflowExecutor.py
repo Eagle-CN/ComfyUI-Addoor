@@ -26,7 +26,7 @@ class RunningHubWorkflowExecutorNode:
     RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("task_id", "msg", "promptTips", "taskStatus", "fileUrl", "fileType", "code", "json")
     FUNCTION = "execute_workflow_and_monitor"
-    CATEGORY = "🌻 葵花宝典/RHAPI"
+    CATEGORY = "🌻 Addoor/RHAPI"
     
     def execute_workflow_and_monitor(self, api_key: str, workflow_id: str, node_info_list: list, seed: int, max_attempts: int, interval_seconds: float):
         if not validate_api_key(api_key):

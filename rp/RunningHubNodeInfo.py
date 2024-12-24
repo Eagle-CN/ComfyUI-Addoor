@@ -14,7 +14,7 @@ class RunningHubNodeInfoNode:
 
     RETURN_TYPES = ("NODEINFO",)
     FUNCTION = "create_node_info"
-    CATEGORY = "🌻 葵花宝典/RHAPI"
+    CATEGORY = "🌻 Addoor/RHAPI"
 
     def create_node_info(self, node_id: str, field_name: str, comment: str, field_value: str):
         node_info = {
