@@ -8,6 +8,7 @@ import configparser
 import base64
 import hashlib
 import logging
+import shutil
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -36,12 +37,19 @@ class EncryptionManager:
 
 def load_nodes():
     try:
-        # 读取配置文件
-        config = configparser.ConfigParser()
+        # Check if config.ini exists, if not, create it from the example
         config_path = os.path.join(os.path.dirname(__file__), 'config.ini')
         if not os.path.exists(config_path):
-            logger.error(f"Config file not found: {config_path}")
-            return {}, {}
+            example_config_path = os.path.join(os.path.dirname(__file__), 'config.ini.example')
+            if os.path.exists(example_config_path):
+                shutil.copy(example_config_path, config_path)
+                logger.info(f"Created config.ini from example file. Please edit {config_path} with your actual license information.")
+            else:
+                logger.error(f"Config example file not found: {example_config_path}")
+                return {}, {}
+
+        # 读取配置文件
+        config = configparser.ConfigParser()
         config.read(config_path)
 
         # 从配置文件中获取许可证密钥和用户ID
