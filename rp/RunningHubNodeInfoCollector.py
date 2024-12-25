@@ -17,7 +17,7 @@ class RunningHubNodeInfoCollectorNode:
 
     RETURN_TYPES = ("NODEINFOLIST",)
     FUNCTION = "collect_node_info"
-    CATEGORY = "🌻 葵花宝典/RHAPI"
+    CATEGORY = "🌻 Addoor/RHAPI"
 
     def collect_node_info(self, node_info_1, node_info_2=None, node_info_3=None, node_info_4=None, node_info_5=None):
         node_info_list = [node_info_1]

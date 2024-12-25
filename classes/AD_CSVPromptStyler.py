@@ -24,7 +24,7 @@ class AD_CSVPromptStyler:
     RETURN_NAMES = ("styled_positive", "styled_negative", "selected_style")
     FUNCTION = "apply_style"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/CSV Controller"
+    CATEGORY = "🌻 Addoor/CSV"
 
     @staticmethod
     def get_styles(csv_path):
@@ -83,12 +83,4 @@ class AD_CSVPromptStyler:
             print(f"Styled negative: {styled_negative}")
 
         return styled_positive, styled_negative, style
-
-N_CLASS_MAPPINGS = {
-    "AD_CSVPromptStyler": AD_CSVPromptStyler,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_CSVPromptStyler": "🌻 CSV Prompt Styler",
-}
 

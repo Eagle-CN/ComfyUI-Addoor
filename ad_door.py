@@ -1,62 +1,59 @@
-from .classes.AD_BatchImageLoadFromDir import AD_BatchImageLoadFromDir, N_CLASS_MAPPINGS as BATCH_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as BATCH_DISPLAY_MAPPINGS
-from .classes.AD_DeleteLocalAny import AD_DeleteLocalAny, N_CLASS_MAPPINGS as DELETE_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as DELETE_DISPLAY_MAPPINGS
-from .classes.AD_TextListToString import AD_TextListToString, N_CLASS_MAPPINGS as TEXT_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as TEXT_DISPLAY_MAPPINGS
-from .classes.AD_AnyFileList import AD_AnyFileList, N_CLASS_MAPPINGS as ANY_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as ANY_DISPLAY_MAPPINGS
-from .classes.AD_ZipSave import AD_ZipSave, N_CLASS_MAPPINGS as ZIP_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as ZIP_DISPLAY_MAPPINGS
-from .classes.AD_ImageSaver import AD_ImageSaver, N_CLASS_MAPPINGS as IMAGE_SAVER_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as IMAGE_SAVER_DISPLAY_MAPPINGS
-from .classes.AD_FluxTrainStepMath import AD_FluxTrainStepMath, N_CLASS_MAPPINGS as FLUX_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as FLUX_DISPLAY_MAPPINGS
-from .classes.AD_TextSaver import AD_TextSaver, N_CLASS_MAPPINGS as TEXT_SAVER_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as TEXT_SAVER_DISPLAY_MAPPINGS
-from .classes.AD_PromptReplace import AD_PromptReplace, N_CLASS_MAPPINGS as PROMPT_REPLACE_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as PROMPT_REPLACE_DISPLAY_MAPPINGS
-from .classes.AD_HFDownload import AD_HFDownload, N_CLASS_MAPPINGS as HF_DOWNLOAD_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as HF_DOWNLOAD_DISPLAY_MAPPINGS
-from .classes.AD_ImageColorFilter import AD_ImageColorFilter, N_CLASS_MAPPINGS as IMAGE_COLOR_FILTER_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as IMAGE_COLOR_FILTER_DISPLAY_MAPPINGS
-from .classes.AD_CSVReader import AD_CSVReader, N_CLASS_MAPPINGS as CSV_READER_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as CSV_READER_DISPLAY_MAPPINGS
-from .classes.AD_CSVPromptStyler import AD_CSVPromptStyler, N_CLASS_MAPPINGS as CSV_PROMPT_STYLER_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as CSV_PROMPT_STYLER_DISPLAY_MAPPINGS
-from .classes.AD_TxtToCSVCombiner import AD_TxtToCSVCombiner, N_CLASS_MAPPINGS as TXT_TO_CSV_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as TXT_TO_CSV_DISPLAY_MAPPINGS
-from .classes.AD_CSVTranslator import AD_CSVTranslator, N_CLASS_MAPPINGS as CSV_TRANSLATOR_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as CSV_TRANSLATOR_DISPLAY_MAPPINGS
-from .classes.AD_LoadImageAdvanced import AD_LoadImageAdvanced, N_CLASS_MAPPINGS as LOAD_IMAGE_ADVANCED_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as LOAD_IMAGE_ADVANCED_DISPLAY_MAPPINGS
-from .classes.AD_ImageDrawRectangleSimple import AD_ImageDrawRectangleSimple, N_CLASS_MAPPINGS as DRAW_RECTANGLE_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as DRAW_RECTANGLE_DISPLAY_MAPPINGS
-from .classes.AD_ImageIndexer import AD_ImageIndexer, N_CLASS_MAPPINGS as IMAGE_INDEXER_CLASS_MAPPINGS, N_DISPLAY_NAME_MAPPINGS as IMAGE_INDEXER_DISPLAY_MAPPINGS
+from .classes.AD_BatchImageLoadFromDir import AD_BatchImageLoadFromDir
+from .classes.AD_DeleteLocalAny import AD_DeleteLocalAny
+from .classes.AD_TextListToString import AD_TextListToString
+from .classes.AD_AnyFileList import AD_AnyFileList
+from .classes.AD_ZipSave import AD_ZipSave
+from .classes.AD_ImageSaver import AD_ImageSaver
+from .classes.AD_FluxTrainStepMath import AD_FluxTrainStepMath
+from .classes.AD_TextSaver import AD_TextSaver
+from .classes.AD_PromptReplace import AD_PromptReplace
+from .classes.AD_HFDownload import AD_HFDownload
+from .classes.AD_CSVReader import AD_CSVReader
+from .classes.AD_CSVPromptStyler import AD_CSVPromptStyler
+from .classes.AD_TxtToCSVCombiner import AD_TxtToCSVCombiner
+from .classes.AD_CSVTranslator import AD_CSVTranslator
+from .classes.AD_LoadImageAdvanced import AD_LoadImageAdvanced
+from .classes.AD_ImageDrawRectangleSimple import AD_ImageDrawRectangleSimple
+from .classes.AD_ImageIndexer import AD_ImageIndexer
 
 NODE_CLASS_MAPPINGS = {
-    **BATCH_CLASS_MAPPINGS,
-    **DELETE_CLASS_MAPPINGS,
-    **TEXT_CLASS_MAPPINGS,
-    **ANY_CLASS_MAPPINGS,
-    **ZIP_CLASS_MAPPINGS,
-    **IMAGE_SAVER_CLASS_MAPPINGS,
-    **FLUX_CLASS_MAPPINGS,
-    **TEXT_SAVER_CLASS_MAPPINGS,
-    **PROMPT_REPLACE_CLASS_MAPPINGS,
-    **HF_DOWNLOAD_CLASS_MAPPINGS,
-    **IMAGE_COLOR_FILTER_CLASS_MAPPINGS,
-    **CSV_READER_CLASS_MAPPINGS,
-    **CSV_PROMPT_STYLER_CLASS_MAPPINGS,
-    **TXT_TO_CSV_CLASS_MAPPINGS,
-    **CSV_TRANSLATOR_CLASS_MAPPINGS,
-    **LOAD_IMAGE_ADVANCED_CLASS_MAPPINGS,
-    **DRAW_RECTANGLE_CLASS_MAPPINGS,
-    **IMAGE_INDEXER_CLASS_MAPPINGS,
+    "AD_BatchImageLoadFromDir": AD_BatchImageLoadFromDir,
+    "AD_DeleteLocalAny": AD_DeleteLocalAny,
+    "AD_TextListToString": AD_TextListToString,
+    "AD_AnyFileList": AD_AnyFileList,
+    "AD_ZipSave": AD_ZipSave,
+    "AD_ImageSaver": AD_ImageSaver,
+    "AD_FluxTrainStepMath": AD_FluxTrainStepMath,
+    "AD_TextSaver": AD_TextSaver,
+    "AD_PromptReplace": AD_PromptReplace,
+    "AD_HFDownload": AD_HFDownload,
+    "AD_CSVReader": AD_CSVReader,
+    "AD_CSVPromptStyler": AD_CSVPromptStyler,
+    "AD_TxtToCSVCombiner": AD_TxtToCSVCombiner,
+    "AD_CSVTranslator": AD_CSVTranslator,
+    "AD_LoadImageAdvanced": AD_LoadImageAdvanced,
+    "AD_ImageDrawRectangleSimple": AD_ImageDrawRectangleSimple,
+    "AD_ImageIndexer": AD_ImageIndexer,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    **BATCH_DISPLAY_MAPPINGS,
-    **DELETE_DISPLAY_MAPPINGS,
-    **TEXT_DISPLAY_MAPPINGS,
-    **ANY_DISPLAY_MAPPINGS,
-    **ZIP_DISPLAY_MAPPINGS,
-    **IMAGE_SAVER_DISPLAY_MAPPINGS,
-    **FLUX_DISPLAY_MAPPINGS,
-    **TEXT_SAVER_DISPLAY_MAPPINGS,
-    **PROMPT_REPLACE_DISPLAY_MAPPINGS,
-    **HF_DOWNLOAD_DISPLAY_MAPPINGS,
-    **IMAGE_COLOR_FILTER_DISPLAY_MAPPINGS,
-    **CSV_READER_DISPLAY_MAPPINGS,
-    **CSV_PROMPT_STYLER_DISPLAY_MAPPINGS,
-    **TXT_TO_CSV_DISPLAY_MAPPINGS,
-    **CSV_TRANSLATOR_DISPLAY_MAPPINGS,
-    **LOAD_IMAGE_ADVANCED_DISPLAY_MAPPINGS,
-    **DRAW_RECTANGLE_DISPLAY_MAPPINGS,
-    **IMAGE_INDEXER_DISPLAY_MAPPINGS,
+    "AD_BatchImageLoadFromDir": "🌻 Batch Image Load From Directory",
+    "AD_DeleteLocalAny": "🌻 Delete Local Any",
+    "AD_TextListToString": "🌻 Text List To String",
+    "AD_AnyFileList": "🌻 Any File List",
+    "AD_ZipSave": "🌻 Zip Save",
+    "AD_ImageSaver": "🌻 Image Saver",
+    "AD_FluxTrainStepMath": "🌻 Flux Train Step Math",
+    "AD_TextSaver": "🌻 Text Saver",
+    "AD_PromptReplace": "🌻 Prompt Replace",
+    "AD_HFDownload": "🌻 Hugging Face Download",
+    "AD_CSVReader": "🌻 CSV Reader",
+    "AD_CSVPromptStyler": "🌻 CSV Prompt Styler",
+    "AD_TxtToCSVCombiner": "🌻 Txt to CSV Combiner",
+    "AD_CSVTranslator": "🌻 CSV Translator",
+    "AD_LoadImageAdvanced": "🌻 Load Image Advanced",
+    "AD_ImageDrawRectangleSimple": "🌻 Draw Simple Rectangle",
+    "AD_ImageIndexer": "🌻 Image Indexer",
 }
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']

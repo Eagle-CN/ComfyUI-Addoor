@@ -17,7 +17,7 @@ class AD_ImageIndexer:
     RETURN_TYPES = ("IMAGE", "INT", "INT")
     RETURN_NAMES = ("image", "current_index", "total_images")
     FUNCTION = "index_image"
-    CATEGORY = "🌻 Addoor/Util"
+    CATEGORY = "🌻 Addoor/Batch"
     INPUT_IS_LIST = True
 
     def index_image(self, images, increment, seed):
@@ -52,12 +52,4 @@ class AD_ImageIndexer:
 
         selected_image = images[selected_index]
         return (selected_image, selected_index, total_images)
-
-N_CLASS_MAPPINGS = {
-    "AD_ImageIndexer": AD_ImageIndexer,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_ImageIndexer": "🌻 Image Indexer",
-}
 

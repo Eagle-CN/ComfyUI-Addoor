@@ -35,7 +35,7 @@ class RunningHubFileSaverNode:
     RETURN_TYPES = ("STRING", "IMAGE", "STRING")
     RETURN_NAMES = ("output_path", "preview", "file_type")
     FUNCTION = "save_file"
-    CATEGORY = "🌻 葵花宝典/RHAPI"
+    CATEGORY = "🌻 Addoor/RHAPI"
 
     def save_file(self, file_url, directory, filename_prefix, filename_delimiter, filename_number_padding, file_extension, open_output_directory):
         try:
@@ -71,8 +71,6 @@ class RunningHubFileSaverNode:
             if file_extension in ['png', 'jpg', 'jpeg']:
                 try:
                     img_data = io.BytesIO(response.content)
-                    img = Image.open(img_data)
-                    img.verify()  # Verify that it's a valid image
                     img = Image.open(img_data)  # Reopen the image after verifying
                     metadata = PngInfo()
                     metadata.add_text("source_url", file_url)
@@ -123,7 +121,6 @@ class RunningHubFileSaverNode:
 
         counter = max(existing_counters, default=0) + 1
         return f"{prefix}{delimiter}{counter:0{number_padding}}.{extension}"
-
 
     @staticmethod
     def open_directory(path):

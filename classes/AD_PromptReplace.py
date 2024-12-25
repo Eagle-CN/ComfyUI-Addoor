@@ -19,7 +19,7 @@ class AD_PromptReplace:
     RETURN_TYPES = ("STRING", "INT")
     RETURN_NAMES = ("Replaced_Text", "new_seed")
     FUNCTION = "replace_prompt"
-    CATEGORY = "🌻 Addoor/Util"
+    CATEGORY = "🌻 Addoor/Utilities"
 
     def replace_prompt(self, Content: str, Match: str, Replace: str, seed: int, Increment: int):
         content_lines = Content.split('\n')
@@ -55,16 +55,5 @@ class AD_PromptReplace:
         # Perform text replacement
         replaced_content = Content.replace(Match, selected_replace) if Match else Content
 
-        # Update the seed for the next iteration
-        #new_seed = random.randint(0, 0xffffffffffffffff) if Increment == 0 else seed
-
         return (replaced_content, seed)
-
-N_CLASS_MAPPINGS = {
-    "AD_PromptReplace": AD_PromptReplace,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_PromptReplace": "🌻 Prompt Replace",
-}
 

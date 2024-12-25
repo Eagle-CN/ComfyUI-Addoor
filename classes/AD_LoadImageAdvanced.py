@@ -24,7 +24,7 @@ class AD_LoadImageAdvanced:
                  "rgba": ("BOOLEAN", {"default": False})}
                 }
 
-    CATEGORY = "🌻 Addoor/Util"
+    CATEGORY = "🌻 Addoor/Image"
 
     RETURN_TYPES = ("IMAGE", "MASK", "STRING")
     RETURN_NAMES = ("IMAGE", "MASK", "FILENAME")
@@ -85,10 +85,3 @@ class AD_LoadImageAdvanced:
 
         return True
 
-N_CLASS_MAPPINGS = {
-   "AD_LoadImageAdvanced": AD_LoadImageAdvanced,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-   "AD_LoadImageAdvanced": "🌻 Load Image Advanced",
-}

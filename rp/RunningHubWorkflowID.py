@@ -11,7 +11,7 @@ class RunningHubWorkflowIDNode:
     
     RETURN_TYPES = ("STRING",)
     FUNCTION = "set_workflow_id"
-    CATEGORY = "🌻 葵花宝典/RHAPI"
+    CATEGORY = "🌻 Addoor/RHAPI"
     
     def set_workflow_id(self, workflow_id: str):
         if not workflow_id.strip():

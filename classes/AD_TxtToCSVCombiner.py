@@ -19,7 +19,7 @@ class AD_TxtToCSVCombiner:
     RETURN_NAMES = ("output_csv_path",)
     FUNCTION = "combine_txt_to_csv"
     OUTPUT_NODE = True
-    CATEGORY = "🌻 Addoor/CSV Controller"
+    CATEGORY = "🌻 Addoor/CSV"
 
     def combine_txt_to_csv(self, input_directory, output_directory, output_filename, add_header, sort_by_filename):
         if not os.path.exists(input_directory):
@@ -64,12 +64,4 @@ class AD_TxtToCSVCombiner:
             return (output_csv_path,)
         except Exception as e:
             return (f"Error creating CSV: {str(e)}",)
-
-N_CLASS_MAPPINGS = {
-    "AD_TxtToCSVCombiner": AD_TxtToCSVCombiner,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_TxtToCSVCombiner": "🌻 Txt to CSV Combiner",
-}
 

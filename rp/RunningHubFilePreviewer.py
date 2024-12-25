@@ -83,7 +83,7 @@ class RunningHubFilePreviewerNode:
 
     RETURN_TYPES = ("STRING",)
     FUNCTION = "preview_file"
-    CATEGORY = "🌻 葵花宝典/RHAPI"
+    CATEGORY = "🌻 Addoor/RHAPI"
     OUTPUT_NODE = True
 
     def preview_file(self, file_path, unique_id=None, extra_pnginfo=None):

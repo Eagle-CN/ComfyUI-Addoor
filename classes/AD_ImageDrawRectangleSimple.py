@@ -106,7 +106,7 @@ class AD_ImageDrawRectangleSimple:
     RETURN_TYPES = ("IMAGE", "MASK")
     RETURN_NAMES = ("IMAGE", "MASK")
     FUNCTION = "node"
-    CATEGORY = "🌻 Addoor/Util"
+    CATEGORY = "🌻 Addoor/Utilities"
 
     def node(
             self,
@@ -165,12 +165,4 @@ class AD_ImageDrawRectangleSimple:
         mask_tensor = mask_tensor.unsqueeze(0)
 
         return (tensor, mask_tensor)
-
-N_CLASS_MAPPINGS = {
-    "AD_ImageDrawRectangleSimple": AD_ImageDrawRectangleSimple,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_ImageDrawRectangleSimple": "🌻 Draw Simple Rectangle",
-}
 

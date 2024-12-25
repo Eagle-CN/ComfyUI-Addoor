@@ -15,7 +15,7 @@ class AD_DeleteLocalAny:
     RETURN_NAMES = ("Tips", "Deleted_Paths")
     OUTPUT_NODE = True
     FUNCTION = "delete_files"
-    CATEGORY = "🌻 Addoor/Batch Operation"
+    CATEGORY = "🌻 Addoor/Batch"
 
     def delete_files(self, Any, File_Name):
         if not isinstance(Any, list):
@@ -52,12 +52,4 @@ class AD_DeleteLocalAny:
                 tips.append(f"'{item}' is not a valid file or directory path")
 
         return ('\n'.join(tips), '\n'.join(deleted_paths))
-
-N_CLASS_MAPPINGS = {
-    "AD_DeleteLocalAny": AD_DeleteLocalAny,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_DeleteLocalAny": "🌻 Delete Local Any",
-}
 

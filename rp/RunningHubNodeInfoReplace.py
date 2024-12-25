@@ -22,7 +22,7 @@ class RunningHubNodeInfoReplaceNode:
     RETURN_TYPES = ("NODEINFO", "INT")
     RETURN_NAMES = ("node_info", "new_seed")
     FUNCTION = "create_node_info"
-    CATEGORY = "🌻 葵花宝典/RHAPI"
+    CATEGORY = "🌻 Addoor/RHAPI"
 
     def create_node_info(self, node_id: str, field_name: str, comment: str, field_value: str, match: str, replace: str, seed: int, increment: int, random_mode: str):
         # Split the field_value and replace into lines

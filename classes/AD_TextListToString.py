@@ -18,7 +18,7 @@ class AD_TextListToString:
     FUNCTION = "load_text_files"
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True, True, True, True, False, False)
-    CATEGORY = "🌻 Addoor/Batch Operation"
+    CATEGORY = "🌻 Addoor/Batch"
 
     def load_text_files(self, Directory, Load_Cap, Skip_Frame):
         text_extensions = ['.txt', '.csv']
@@ -52,12 +52,4 @@ class AD_TextListToString:
         
         count = len(file_contents)
         return (file_names, file_contents, file_paths, file_names_suffix, count, merged_content.strip())
-
-N_CLASS_MAPPINGS = {
-    "AD_TextListToString": AD_TextListToString,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_TextListToString": "🌻 Text List To String",
-}
 

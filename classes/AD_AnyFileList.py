@@ -24,7 +24,7 @@ class AD_AnyFileList:
     FUNCTION = "process_files"
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (False, True, True, True, True, True, False, False)
-    CATEGORY = "🌻 Addoor/Batch Operation"
+    CATEGORY = "🌻 Addoor/Batch"
 
     def process_files(self, Directory, Load_Cap, Skip_Frame, Filter_By, Extension, Deep_Search, seed):
         file_extensions = {
@@ -85,12 +85,4 @@ class AD_AnyFileList:
         
         total_files = len(file_paths)
         return (Directory, image_list, text_list, file_paths, file_name_list, file_name_with_extension_list, total_files, merged_text.strip())
-
-N_CLASS_MAPPINGS = {
-    "AD_AnyFileList": AD_AnyFileList,
-}
-
-N_DISPLAY_NAME_MAPPINGS = {
-    "AD_AnyFileList": "🌻 Any File List",
-}
 
