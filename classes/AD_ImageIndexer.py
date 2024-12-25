@@ -12,44 +12,50 @@ class AD_ImageIndexer:
                 "increment": ("INT", {"default": 1, "min": 0, "max": 1000, "step": 1}),
                 "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
             },
+            "optional": {
+                "images_name": ("STRING", {"forceInput": True}),
+            }
         }
 
-    RETURN_TYPES = ("IMAGE", "INT", "INT")
-    RETURN_NAMES = ("image", "current_index", "total_images")
-    FUNCTION = "index_image"
+    RETURN_TYPES = ("IMAGE", "STRING", "INT", "INT")
+    RETURN_NAMES = ("image", "image_name", "current_index", "total_items")
+    FUNCTION = "index_item"
     CATEGORY = "🌻 Addoor/Batch"
     INPUT_IS_LIST = True
 
-    def index_image(self, images, increment, seed):
+    def index_item(self, images, increment, seed, images_name=None):
         if not isinstance(images, list):
             images = [images]
         
-        # Ensure increment is an integer, even if it's passed as a list
-        increment = int(increment[0] if isinstance(increment, list) else increment)
-        # Ensure seed is an integer, even if it's passed as a list
-        seed = int(seed[0] if isinstance(seed, list) else seed)
-
         total_images = len(images)
         
+        # Ensure increment and seed are integers
+        increment = int(increment[0] if isinstance(increment, list) else increment)
+        seed = int(seed[0] if isinstance(seed, list) else seed)
 
-        if self.current_index is None:
+        # Initialize or update current_index
+        if self.current_index is None or self.current_index >= total_images:
             if increment == 0:
-                # Random starting point
                 random.seed(seed)
                 self.current_index = random.randint(0, total_images - 1)
             else:
-                # Start from the beginning
                 self.current_index = 0
 
+        # Select an image
         if increment == 0:
-            # Random selection using seed
             random.seed(seed)
             selected_index = random.randint(0, total_images - 1)
         else:
-            # Sequential selection based on increment
             selected_index = self.current_index
             self.current_index = (self.current_index + increment) % total_images
 
         selected_image = images[selected_index]
-        return (selected_image, selected_index, total_images)
+
+        # Handle image_name
+        if images_name is not None and isinstance(images_name, list) and len(images_name) > selected_index:
+            image_name = images_name[selected_index]
+        else:
+            image_name = ""
+
+        return (selected_image, image_name, selected_index, total_images)
 
