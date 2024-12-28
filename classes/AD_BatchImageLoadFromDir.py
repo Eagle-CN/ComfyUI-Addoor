@@ -22,7 +22,7 @@ class AD_BatchImageLoadFromDir:
     OUTPUT_IS_LIST = (True, True, True, True, False)
     CATEGORY = "🌻 Addoor/Batch"
 
-    def load_images(self, Directory, Load_Cap, Skip_Frame):
+    def load_images(self, Directory, Load_Cap, Skip_Frame, seed):
         image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.webp']
         file_paths = []
         for root, dirs, files in os.walk(Directory):
