@@ -3,7 +3,7 @@ import re
 from urllib.parse import urlparse, unquote
 from huggingface_hub import hf_hub_download, snapshot_download, HfApi
 from huggingface_hub.utils import HfHubHTTPError
-import gradio as gr
+# import gradio as gr
 
 class AD_HFDownload:
     @classmethod
