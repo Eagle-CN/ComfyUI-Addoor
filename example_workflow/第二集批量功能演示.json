@@ -1,0 +1,1511 @@
+{
+  "last_node_id": 34,
+  "last_link_id": 42,
+  "nodes": [
+    {
+      "id": 13,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3977,
+        "1": -4906
+      },
+      "size": {
+        "0": 312.8873596191406,
+        "1": 376
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 20,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "input/01"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "PreviewImage",
+      "pos": {
+        "0": -3849,
+        "1": -4906
+      },
+      "size": {
+        "0": 283.8653869628906,
+        "1": 334.71240234375
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 16,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3714,
+        "1": -4908
+      },
+      "size": {
+        "0": 312.8873596191406,
+        "1": 426
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 21,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行",
+        ", This is a photograph from a movie, specifically a Western film, showcasing a dramatic scene. The image features a rugged, intense male character, likely a Native American or mixed-heritage individual, with long, dark hair and a stern expression. He is dressed in traditional Western attire, including a red shirt with billowy sleeves and a pair of worn leather gloves. His eyes are narrowed, focusing intently on the camera.\n\nHe is holding a vintage-style revolver, aimed directly at the viewer, with his hands gripping the gun firmly. The background is a rustic, old-west setting with wooden buildings featuring a mix of white and brown hues, with visible wooden planks and a hint of a storefront. To the left, a blurred figure of a woman, dressed in a long, dark dress with a white apron, is visible, adding a sense of depth to the scene.\n\nThe overall atmosphere is tense and suspenseful, with the warm, golden light of the setting sun casting long shadows and emphasizing the rugged textures of the environment. The image is rich in detail and texture, capturing the essence of a classic Western showdown. The character's expression and the setting evoke a strong sense of drama and confrontation. The photograph is likely a still from a film, possibly a Sergio Leone or",
+        ", This is a photograph from a western film, likely from the 1960s or 1970s, given the style and setting. The scene is set in a dimly lit, rustic saloon with wooden beams and large windows that allow natural light to filter in, casting a warm glow. The central figure is a rugged, muscular man with a rugged, weathered complexion, likely a Native American or of mixed heritage, with long, dark hair tied back. He wears a bright red shirt with billowy sleeves, unbuttoned to reveal a chest adorned with a silver pendant, and black pants with a wide leather belt. His outfit is reminiscent of a 19th-century cowboy or outlaw.\n\nTo his left, a man with a hat and a bushy beard is partially obscured, but his attire suggests a rough, frontier-style clothing. In the background, several figures are visible, including a man in a top hat and a woman, all dressed in period attire, adding to the saloon's lively atmosphere. The lighting is warm and intimate, with a hint of nostalgia, emphasizing the historical setting and the characters' rugged, lawless lives. The overall mood is tense and anticipatory, hinting at a confrontation or a dramatic event. The image is rich in",
+        ", This is a photograph of a young boy, likely in his early teens, with a fair complexion and light brown hair. He has a slender build and a gentle, inquisitive expression. He wears a wide-brimmed, brown cowboy hat, which casts a shadow on his face, adding to his rugged, adventurous look. A brown scarf with a subtle, intricate pattern is wrapped around his neck, adding a touch of rustic charm. The background is blurred, featuring a mix of muted, earthy tones with vertical stripes, suggesting a rustic or western setting, possibly a barn or a rural area. The lighting is natural, with warm sunlight casting a gentle glow on the subject's face, highlighting his features and the textures of his clothing. The overall atmosphere is one of quiet contemplation, as if the boy is lost in thought. The image is a still from a film or a photograph with a cinematic quality, emphasizing the boy's youthful innocence and the rugged, timeless atmosphere of the American West. The color palette is muted, with earthy tones dominating the scene. The image is shot in a way that captures the boy's emotional depth and the surroundings' rustic charm. The style is reminiscent of classic Western films or photographs. The boy's eyes are a bright, piercing",
+        ", This is a photograph taken in a classic Western setting, characterized by a dusty, sun-scorched town with wooden buildings and a clear blue sky. The image features a young man, likely in his early twenties, with a rugged, masculine appearance. He wears a worn, brown cowboy hat and a matching brown leather duster coat with a subtle sheen, suggesting a well-worn texture. A patterned bandana is tied around his neck, adding to his rugged, frontier-style attire.\n\nThe man is holding a shiny, silver revolver with a prominent grip, pointing it directly at the camera. His expression is serious, with a hint of determination or warning. The background shows a weathered, wooden building with a sloping roof and a few windows, partially obscured by the sun. Another building, slightly further back, has a similar rustic appearance, with a few people milling about, dressed in period attire, adding to the scene's authenticity. The overall atmosphere is tense and foreboding, fitting for a classic Western scenario. The photograph's color palette is muted, with earthy tones dominating the scene, emphasizing the rugged, historical setting. The image is shot in a cinematic style, with a focus on dramatic lighting and composition. The young man's arm and revolver dominate"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3584,
+        "1": -4908
+      },
+      "size": {
+        "0": 312.8873596191406,
+        "1": 676
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 22,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "input/01/.DS_Store",
+        "input/01/a.csv",
+        "input/01/b.csv",
+        "input/01/c.csv",
+        "input/01/d.csv",
+        "input/01/juben1.jpg",
+        "input/01/juben1.txt",
+        "input/01/juben2.jpg",
+        "input/01/juben2.txt",
+        "input/01/juben3.jpg",
+        "input/01/juben3.txt",
+        "input/01/juben4.jpg",
+        "input/01/juben4.txt"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3434,
+        "1": -4909
+      },
+      "size": {
+        "0": 312.8873596191406,
+        "1": 676
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 23,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        ".DS_Store",
+        "a",
+        "b",
+        "c",
+        "d",
+        "juben1",
+        "juben1",
+        "juben2",
+        "juben2",
+        "juben3",
+        "juben3",
+        "juben4",
+        "juben4"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3320,
+        "1": -4909
+      },
+      "size": {
+        "0": 312.8873596191406,
+        "1": 676
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 24,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        ".DS_Store",
+        "a.csv",
+        "b.csv",
+        "c.csv",
+        "d.csv",
+        "juben1.jpg",
+        "juben1.txt",
+        "juben2.jpg",
+        "juben2.txt",
+        "juben3.jpg",
+        "juben3.txt",
+        "juben4.jpg",
+        "juben4.txt"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Display Int (rgthree)",
+      "pos": {
+        "0": -3171,
+        "1": -4909
+      },
+      "size": {
+        "0": 315,
+        "1": 76
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "INT",
+          "link": 27,
+          "widget": {
+            "name": "input"
+          },
+          "label": "输入",
+          "dir": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        0,
+        ""
+      ]
+    },
+    {
+      "id": 22,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3032,
+        "1": -4907
+      },
+      "size": {
+        "0": 312.8873596191406,
+        "1": 376
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 26,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行\n\n1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行\n\n1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行\n\n1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行\n\n, This is a photograph from a movie, specifically a Western film, showcasing a dramatic scene. The image features a rugged, intense male character, likely a Native American or mixed-heritage individual, with long, dark hair and a stern expression. He is dressed in traditional Western attire, including a red shirt with billowy sleeves and a pair of worn leather gloves. His eyes are narrowed, focusing intently on the camera.\n\nHe is holding a vintage-style revolver, aimed directly at the viewer, with his hands gripping the gun firmly. The background is a rustic, old-west setting with wooden buildings featuring a mix of white and brown hues, with visible wooden planks and a hint of a storefront. To the left, a blurred figure of a woman, dressed in a long, dark dress with a white apron, is visible, adding a sense of depth to the scene.\n\nThe overall atmosphere is tense and suspenseful, with the warm, golden light of the setting sun casting long shadows and emphasizing the rugged textures of the environment. The image is rich in detail and texture, capturing the essence of a classic Western showdown. The character's expression and the setting evoke a strong sense of drama and confrontation. The photograph is likely a still from a film, possibly a Sergio Leone or\n\n, This is a photograph from a western film, likely from the 1960s or 1970s, given the style and setting. The scene is set in a dimly lit, rustic saloon with wooden beams and large windows that allow natural light to filter in, casting a warm glow. The central figure is a rugged, muscular man with a rugged, weathered complexion, likely a Native American or of mixed heritage, with long, dark hair tied back. He wears a bright red shirt with billowy sleeves, unbuttoned to reveal a chest adorned with a silver pendant, and black pants with a wide leather belt. His outfit is reminiscent of a 19th-century cowboy or outlaw.\n\nTo his left, a man with a hat and a bushy beard is partially obscured, but his attire suggests a rough, frontier-style clothing. In the background, several figures are visible, including a man in a top hat and a woman, all dressed in period attire, adding to the saloon's lively atmosphere. The lighting is warm and intimate, with a hint of nostalgia, emphasizing the historical setting and the characters' rugged, lawless lives. The overall mood is tense and anticipatory, hinting at a confrontation or a dramatic event. The image is rich in\n\n, This is a photograph of a young boy, likely in his early teens, with a fair complexion and light brown hair. He has a slender build and a gentle, inquisitive expression. He wears a wide-brimmed, brown cowboy hat, which casts a shadow on his face, adding to his rugged, adventurous look. A brown scarf with a subtle, intricate pattern is wrapped around his neck, adding a touch of rustic charm. The background is blurred, featuring a mix of muted, earthy tones with vertical stripes, suggesting a rustic or western setting, possibly a barn or a rural area. The lighting is natural, with warm sunlight casting a gentle glow on the subject's face, highlighting his features and the textures of his clothing. The overall atmosphere is one of quiet contemplation, as if the boy is lost in thought. The image is a still from a film or a photograph with a cinematic quality, emphasizing the boy's youthful innocence and the rugged, timeless atmosphere of the American West. The color palette is muted, with earthy tones dominating the scene. The image is shot in a way that captures the boy's emotional depth and the surroundings' rustic charm. The style is reminiscent of classic Western films or photographs. The boy's eyes are a bright, piercing\n\n, This is a photograph taken in a classic Western setting, characterized by a dusty, sun-scorched town with wooden buildings and a clear blue sky. The image features a young man, likely in his early twenties, with a rugged, masculine appearance. He wears a worn, brown cowboy hat and a matching brown leather duster coat with a subtle sheen, suggesting a well-worn texture. A patterned bandana is tied around his neck, adding to his rugged, frontier-style attire.\n\nThe man is holding a shiny, silver revolver with a prominent grip, pointing it directly at the camera. His expression is serious, with a hint of determination or warning. The background shows a weathered, wooden building with a sloping roof and a few windows, partially obscured by the sun. Another building, slightly further back, has a similar rustic appearance, with a few people milling about, dressed in period attire, adding to the scene's authenticity. The overall atmosphere is tense and foreboding, fitting for a classic Western scenario. The photograph's color palette is muted, with earthy tones dominating the scene, emphasizing the rugged, historical setting. The image is shot in a cinematic style, with a focus on dramatic lighting and composition. The young man's arm and revolver dominate"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "PreviewImage",
+      "pos": {
+        "0": -3970,
+        "1": -4450
+      },
+      "size": {
+        "0": 309.4773254394531,
+        "1": 246
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 24,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3849,
+        "1": -4448
+      },
+      "size": {
+        "0": 315,
+        "1": 226
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 28,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "input/01/juben1.jpg",
+        "input/01/juben2.jpg",
+        "input/01/juben3.jpg",
+        "input/01/juben4.jpg"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3723,
+        "1": -4448
+      },
+      "size": {
+        "0": 315,
+        "1": 226
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 29,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "juben1.jpg",
+        "juben2.jpg",
+        "juben3.jpg",
+        "juben4.jpg"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3560,
+        "1": -4448
+      },
+      "size": {
+        "0": 315,
+        "1": 226
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 30,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "juben1",
+        "juben2",
+        "juben3",
+        "juben4"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "Display Int (rgthree)",
+      "pos": {
+        "0": -3420,
+        "1": -4448
+      },
+      "size": {
+        "0": 315,
+        "1": 76
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "INT",
+          "link": 31,
+          "widget": {
+            "name": "input"
+          },
+          "label": "输入",
+          "dir": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        0,
+        ""
+      ]
+    },
+    {
+      "id": 7,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3977,
+        "1": -4134
+      },
+      "size": {
+        "0": 315.8172607421875,
+        "1": 426
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 2,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "a",
+        "b",
+        "c",
+        "d",
+        "juben1",
+        "juben2",
+        "juben3",
+        "juben4"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3854,
+        "1": -4138
+      },
+      "size": {
+        "0": 315.8172607421875,
+        "1": 426
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 32,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行",
+        ", This is a photograph from a movie, specifically a Western film, showcasing a dramatic scene. The image features a rugged, intense male character, likely a Native American or mixed-heritage individual, with long, dark hair and a stern expression. He is dressed in traditional Western attire, including a red shirt with billowy sleeves and a pair of worn leather gloves. His eyes are narrowed, focusing intently on the camera.\n\nHe is holding a vintage-style revolver, aimed directly at the viewer, with his hands gripping the gun firmly. The background is a rustic, old-west setting with wooden buildings featuring a mix of white and brown hues, with visible wooden planks and a hint of a storefront. To the left, a blurred figure of a woman, dressed in a long, dark dress with a white apron, is visible, adding a sense of depth to the scene.\n\nThe overall atmosphere is tense and suspenseful, with the warm, golden light of the setting sun casting long shadows and emphasizing the rugged textures of the environment. The image is rich in detail and texture, capturing the essence of a classic Western showdown. The character's expression and the setting evoke a strong sense of drama and confrontation. The photograph is likely a still from a film, possibly a Sergio Leone or",
+        ", This is a photograph from a western film, likely from the 1960s or 1970s, given the style and setting. The scene is set in a dimly lit, rustic saloon with wooden beams and large windows that allow natural light to filter in, casting a warm glow. The central figure is a rugged, muscular man with a rugged, weathered complexion, likely a Native American or of mixed heritage, with long, dark hair tied back. He wears a bright red shirt with billowy sleeves, unbuttoned to reveal a chest adorned with a silver pendant, and black pants with a wide leather belt. His outfit is reminiscent of a 19th-century cowboy or outlaw.\n\nTo his left, a man with a hat and a bushy beard is partially obscured, but his attire suggests a rough, frontier-style clothing. In the background, several figures are visible, including a man in a top hat and a woman, all dressed in period attire, adding to the saloon's lively atmosphere. The lighting is warm and intimate, with a hint of nostalgia, emphasizing the historical setting and the characters' rugged, lawless lives. The overall mood is tense and anticipatory, hinting at a confrontation or a dramatic event. The image is rich in",
+        ", This is a photograph of a young boy, likely in his early teens, with a fair complexion and light brown hair. He has a slender build and a gentle, inquisitive expression. He wears a wide-brimmed, brown cowboy hat, which casts a shadow on his face, adding to his rugged, adventurous look. A brown scarf with a subtle, intricate pattern is wrapped around his neck, adding a touch of rustic charm. The background is blurred, featuring a mix of muted, earthy tones with vertical stripes, suggesting a rustic or western setting, possibly a barn or a rural area. The lighting is natural, with warm sunlight casting a gentle glow on the subject's face, highlighting his features and the textures of his clothing. The overall atmosphere is one of quiet contemplation, as if the boy is lost in thought. The image is a still from a film or a photograph with a cinematic quality, emphasizing the boy's youthful innocence and the rugged, timeless atmosphere of the American West. The color palette is muted, with earthy tones dominating the scene. The image is shot in a way that captures the boy's emotional depth and the surroundings' rustic charm. The style is reminiscent of classic Western films or photographs. The boy's eyes are a bright, piercing",
+        ", This is a photograph taken in a classic Western setting, characterized by a dusty, sun-scorched town with wooden buildings and a clear blue sky. The image features a young man, likely in his early twenties, with a rugged, masculine appearance. He wears a worn, brown cowboy hat and a matching brown leather duster coat with a subtle sheen, suggesting a well-worn texture. A patterned bandana is tied around his neck, adding to his rugged, frontier-style attire.\n\nThe man is holding a shiny, silver revolver with a prominent grip, pointing it directly at the camera. His expression is serious, with a hint of determination or warning. The background shows a weathered, wooden building with a sloping roof and a few windows, partially obscured by the sun. Another building, slightly further back, has a similar rustic appearance, with a few people milling about, dressed in period attire, adding to the scene's authenticity. The overall atmosphere is tense and foreboding, fitting for a classic Western scenario. The photograph's color palette is muted, with earthy tones dominating the scene, emphasizing the rugged, historical setting. The image is shot in a cinematic style, with a focus on dramatic lighting and composition. The young man's arm and revolver dominate"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3720,
+        "1": -4140
+      },
+      "size": {
+        "0": 315.8172607421875,
+        "1": 426
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 33,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "input/01/a.csv",
+        "input/01/b.csv",
+        "input/01/c.csv",
+        "input/01/d.csv",
+        "input/01/juben1.txt",
+        "input/01/juben2.txt",
+        "input/01/juben3.txt",
+        "input/01/juben4.txt"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3592,
+        "1": -4138
+      },
+      "size": {
+        "0": 315.8172607421875,
+        "1": 426
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 34,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "a.csv",
+        "b.csv",
+        "c.csv",
+        "d.csv",
+        "juben1.txt",
+        "juben2.txt",
+        "juben3.txt",
+        "juben4.txt"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "Display Int (rgthree)",
+      "pos": {
+        "0": -3442,
+        "1": -4137
+      },
+      "size": {
+        "0": 210,
+        "1": 76
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "INT",
+          "link": 36,
+          "widget": {
+            "name": "input"
+          },
+          "label": "输入",
+          "dir": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        0,
+        ""
+      ]
+    },
+    {
+      "id": 31,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3308,
+        "1": -4138
+      },
+      "size": {
+        "0": 315.8172607421875,
+        "1": 245.62513732910156
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 35,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行\n\n1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行\n\n1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行\n\n1,第一行\n2,第二行\n3,第三行\n4,第四行\n5,第五行\n6,第六行\n7,第七行\n8,第八行\n9,第九行\n10,第十行\n\n, This is a photograph from a movie, specifically a Western film, showcasing a dramatic scene. The image features a rugged, intense male character, likely a Native American or mixed-heritage individual, with long, dark hair and a stern expression. He is dressed in traditional Western attire, including a red shirt with billowy sleeves and a pair of worn leather gloves. His eyes are narrowed, focusing intently on the camera.\n\nHe is holding a vintage-style revolver, aimed directly at the viewer, with his hands gripping the gun firmly. The background is a rustic, old-west setting with wooden buildings featuring a mix of white and brown hues, with visible wooden planks and a hint of a storefront. To the left, a blurred figure of a woman, dressed in a long, dark dress with a white apron, is visible, adding a sense of depth to the scene.\n\nThe overall atmosphere is tense and suspenseful, with the warm, golden light of the setting sun casting long shadows and emphasizing the rugged textures of the environment. The image is rich in detail and texture, capturing the essence of a classic Western showdown. The character's expression and the setting evoke a strong sense of drama and confrontation. The photograph is likely a still from a film, possibly a Sergio Leone or\n\n, This is a photograph from a western film, likely from the 1960s or 1970s, given the style and setting. The scene is set in a dimly lit, rustic saloon with wooden beams and large windows that allow natural light to filter in, casting a warm glow. The central figure is a rugged, muscular man with a rugged, weathered complexion, likely a Native American or of mixed heritage, with long, dark hair tied back. He wears a bright red shirt with billowy sleeves, unbuttoned to reveal a chest adorned with a silver pendant, and black pants with a wide leather belt. His outfit is reminiscent of a 19th-century cowboy or outlaw.\n\nTo his left, a man with a hat and a bushy beard is partially obscured, but his attire suggests a rough, frontier-style clothing. In the background, several figures are visible, including a man in a top hat and a woman, all dressed in period attire, adding to the saloon's lively atmosphere. The lighting is warm and intimate, with a hint of nostalgia, emphasizing the historical setting and the characters' rugged, lawless lives. The overall mood is tense and anticipatory, hinting at a confrontation or a dramatic event. The image is rich in\n\n, This is a photograph of a young boy, likely in his early teens, with a fair complexion and light brown hair. He has a slender build and a gentle, inquisitive expression. He wears a wide-brimmed, brown cowboy hat, which casts a shadow on his face, adding to his rugged, adventurous look. A brown scarf with a subtle, intricate pattern is wrapped around his neck, adding a touch of rustic charm. The background is blurred, featuring a mix of muted, earthy tones with vertical stripes, suggesting a rustic or western setting, possibly a barn or a rural area. The lighting is natural, with warm sunlight casting a gentle glow on the subject's face, highlighting his features and the textures of his clothing. The overall atmosphere is one of quiet contemplation, as if the boy is lost in thought. The image is a still from a film or a photograph with a cinematic quality, emphasizing the boy's youthful innocence and the rugged, timeless atmosphere of the American West. The color palette is muted, with earthy tones dominating the scene. The image is shot in a way that captures the boy's emotional depth and the surroundings' rustic charm. The style is reminiscent of classic Western films or photographs. The boy's eyes are a bright, piercing\n\n, This is a photograph taken in a classic Western setting, characterized by a dusty, sun-scorched town with wooden buildings and a clear blue sky. The image features a young man, likely in his early twenties, with a rugged, masculine appearance. He wears a worn, brown cowboy hat and a matching brown leather duster coat with a subtle sheen, suggesting a well-worn texture. A patterned bandana is tied around his neck, adding to his rugged, frontier-style attire.\n\nThe man is holding a shiny, silver revolver with a prominent grip, pointing it directly at the camera. His expression is serious, with a hint of determination or warning. The background shows a weathered, wooden building with a sloping roof and a few windows, partially obscured by the sun. Another building, slightly further back, has a similar rustic appearance, with a few people milling about, dressed in period attire, adding to the scene's authenticity. The overall atmosphere is tense and foreboding, fitting for a classic Western scenario. The photograph's color palette is muted, with earthy tones dominating the scene, emphasizing the rugged, historical setting. The image is shot in a cinematic style, with a focus on dramatic lighting and composition. The young man's arm and revolver dominate"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "AD_AnyFileList",
+      "pos": {
+        "0": -4276,
+        "1": -4906
+      },
+      "size": {
+        "0": 281.995361328125,
+        "1": 366
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "Directory_Output",
+          "type": "STRING",
+          "links": [
+            20
+          ],
+          "slot_index": 0,
+          "label": "输出目录"
+        },
+        {
+          "name": "Image_List",
+          "type": "IMAGE",
+          "links": [
+            12,
+            37
+          ],
+          "slot_index": 1,
+          "shape": 6,
+          "label": "图片列表"
+        },
+        {
+          "name": "Text_List",
+          "type": "STRING",
+          "links": [
+            21
+          ],
+          "slot_index": 2,
+          "shape": 6,
+          "label": "文本列表"
+        },
+        {
+          "name": "File_Path_List",
+          "type": "STRING",
+          "links": [
+            22
+          ],
+          "slot_index": 3,
+          "shape": 6,
+          "label": "文件路径列表"
+        },
+        {
+          "name": "File_Name_List",
+          "type": "STRING",
+          "links": [
+            23
+          ],
+          "slot_index": 4,
+          "shape": 6,
+          "label": "文件名列表"
+        },
+        {
+          "name": "File_Name_With_Extension_List",
+          "type": "STRING",
+          "links": [
+            24
+          ],
+          "slot_index": 5,
+          "shape": 6,
+          "label": "文件名列表（带扩展名）"
+        },
+        {
+          "name": "Total_Files",
+          "type": "INT",
+          "links": [
+            27
+          ],
+          "slot_index": 6,
+          "label": "文件总数"
+        },
+        {
+          "name": "Merged_Text",
+          "type": "STRING",
+          "links": [
+            26
+          ],
+          "slot_index": 7,
+          "label": "合并文本"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AD_AnyFileList"
+      },
+      "widgets_values": [
+        "input/01",
+        100,
+        0,
+        "*",
+        "*",
+        false,
+        318269748208999,
+        "randomize"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "AD_BatchImageLoadFromDir",
+      "pos": {
+        "0": -4271,
+        "1": -4458
+      },
+      "size": {
+        "0": 270.2084655761719,
+        "1": 234
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "Images",
+          "type": "IMAGE",
+          "links": [
+            1
+          ],
+          "slot_index": 0,
+          "shape": 6,
+          "label": "图片"
+        },
+        {
+          "name": "Image_Paths",
+          "type": "STRING",
+          "links": [
+            28
+          ],
+          "slot_index": 1,
+          "shape": 6,
+          "label": "图片路径"
+        },
+        {
+          "name": "Image_Names_suffix",
+          "type": "STRING",
+          "links": [
+            29
+          ],
+          "slot_index": 2,
+          "shape": 6,
+          "label": "图片名称（带后缀）"
+        },
+        {
+          "name": "Image_Names",
+          "type": "STRING",
+          "links": [
+            30
+          ],
+          "slot_index": 3,
+          "shape": 6,
+          "label": "图片名称"
+        },
+        {
+          "name": "Count",
+          "type": "INT",
+          "links": [
+            31
+          ],
+          "slot_index": 4,
+          "label": "数量"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AD_BatchImageLoadFromDir"
+      },
+      "widgets_values": [
+        "input/01",
+        100,
+        0,
+        1020012985892447,
+        "randomize"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "AD_TextListToString",
+      "pos": {
+        "0": -4270,
+        "1": -4133
+      },
+      "size": {
+        "0": 263.3137512207031,
+        "1": 254
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "File_Names",
+          "type": "STRING",
+          "links": [
+            2
+          ],
+          "slot_index": 0,
+          "shape": 6,
+          "label": "文件名"
+        },
+        {
+          "name": "File_Contents",
+          "type": "STRING",
+          "links": [
+            32
+          ],
+          "slot_index": 1,
+          "shape": 6,
+          "label": "文件内容"
+        },
+        {
+          "name": "File_Paths",
+          "type": "STRING",
+          "links": [
+            33
+          ],
+          "slot_index": 2,
+          "shape": 6,
+          "label": "文件路径"
+        },
+        {
+          "name": "File_Names_Suffix",
+          "type": "STRING",
+          "links": [
+            34
+          ],
+          "slot_index": 3,
+          "shape": 6,
+          "label": "文件名（带后缀）"
+        },
+        {
+          "name": "Count",
+          "type": "INT",
+          "links": [
+            36
+          ],
+          "slot_index": 4,
+          "label": "数量"
+        },
+        {
+          "name": "Merged_Content",
+          "type": "STRING",
+          "links": [
+            35
+          ],
+          "slot_index": 5,
+          "label": "合并内容"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AD_TextListToString"
+      },
+      "widgets_values": [
+        "input/01",
+        100,
+        0,
+        186464438873645,
+        "randomize"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -3180,
+        "1": -4335
+      },
+      "size": {
+        "0": 364.3087158203125,
+        "1": 333.2256774902344
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 40,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "Deleted file: input/01/a.csv\nDeleted file: input/01/b.csv\nDeleted file: input/01/c.csv\nDeleted file: input/01/d.csv\nDeleted file: input/01/juben1.txt\nDeleted file: input/01/juben2.txt\nDeleted file: input/01/juben3.txt\nDeleted file: input/01/juben4.txt"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "AD_ImageIndexer",
+      "pos": {
+        "0": -3579,
+        "1": -4731
+      },
+      "size": {
+        "0": 315,
+        "1": 170
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 37,
+          "label": "images"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            38
+          ],
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "current_index",
+          "type": "INT",
+          "links": null,
+          "label": "current_index"
+        },
+        {
+          "name": "total_images",
+          "type": "INT",
+          "links": null,
+          "label": "total_images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AD_ImageIndexer"
+      },
+      "widgets_values": [
+        1,
+        117031200145723,
+        "randomize",
+        0
+      ]
+    },
+    {
+      "id": 33,
+      "type": "PreviewImage",
+      "pos": {
+        "0": -3203,
+        "1": -4734
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 38,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 5,
+      "type": "AD_DeleteLocalAny",
+      "pos": {
+        "0": -3865,
+        "1": -4333
+      },
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Any",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "Any"
+          },
+          "label": "任意文件/目录"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Tips",
+          "type": "STRING",
+          "links": [
+            40
+          ],
+          "slot_index": 0,
+          "label": "提示"
+        },
+        {
+          "name": "Deleted_Paths",
+          "type": "STRING",
+          "links": null,
+          "label": "已删除路径"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AD_DeleteLocalAny"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      3,
+      0,
+      7,
+      0,
+      "STRING"
+    ],
+    [
+      12,
+      1,
+      1,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      1,
+      0,
+      13,
+      0,
+      "STRING"
+    ],
+    [
+      21,
+      1,
+      2,
+      16,
+      0,
+      "STRING"
+    ],
+    [
+      22,
+      1,
+      3,
+      17,
+      0,
+      "STRING"
+    ],
+    [
+      23,
+      1,
+      4,
+      18,
+      0,
+      "STRING"
+    ],
+    [
+      24,
+      1,
+      5,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      26,
+      1,
+      7,
+      22,
+      0,
+      "STRING"
+    ],
+    [
+      27,
+      1,
+      6,
+      23,
+      0,
+      "INT"
+    ],
+    [
+      28,
+      2,
+      1,
+      24,
+      0,
+      "STRING"
+    ],
+    [
+      29,
+      2,
+      2,
+      25,
+      0,
+      "STRING"
+    ],
+    [
+      30,
+      2,
+      3,
+      26,
+      0,
+      "STRING"
+    ],
+    [
+      31,
+      2,
+      4,
+      27,
+      0,
+      "INT"
+    ],
+    [
+      32,
+      3,
+      1,
+      28,
+      0,
+      "STRING"
+    ],
+    [
+      33,
+      3,
+      2,
+      29,
+      0,
+      "STRING"
+    ],
+    [
+      34,
+      3,
+      3,
+      30,
+      0,
+      "STRING"
+    ],
+    [
+      35,
+      3,
+      5,
+      31,
+      0,
+      "STRING"
+    ],
+    [
+      36,
+      3,
+      4,
+      32,
+      0,
+      "INT"
+    ],
+    [
+      37,
+      1,
+      1,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      4,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      5,
+      0,
+      34,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.45,
+      "offset": [
+        5710.833333333333,
+        5209.777777777777
+      ]
+    },
+    "groupNodes": {}
+  },
+  "version": 0.4
+}
