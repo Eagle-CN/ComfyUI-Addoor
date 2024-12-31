@@ -4,70 +4,126 @@ import numpy as np
 from PIL import Image
 from PIL.PngImagePlugin import PngInfo
 import subprocess
+import folder_paths
 
 class AD_ImageSaver:
     def __init__(self):
+        self.output_dir = folder_paths.get_output_directory()
         self.compression = 4
+        self.type = "output"
+        self.prefix_append = ""
 
     @classmethod
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "Images": ("IMAGE",),
-                "Directory": ("STRING", {"default": ""}),
-                "Filename_Prefix": ("STRING", {"default": "Image"}),
-                "Open_Output_Directory": ("BOOLEAN", {"default": False}),
+                "images": ("IMAGE",),
+                "folder": ("STRING", {"default": ""}),
+                "filename_prefix": ("STRING", {"default": "ComfyUI"}),
+                "overwrite_warning": ("BOOLEAN", {"default": False}),
+                "include_metadata": ("BOOLEAN", {"default": True}),
+                "extension": (["png", "jpg"],),
+                "quality": ("INT", {"default": 95, "min": 0, "max": 100}),
+                "open_output_directory": ("BOOLEAN", {"default": False}),
+            },
+            "optional": {
+                "filename_opt": ("STRING", {"forceInput": True}),
             },
             "hidden": {"prompt": "PROMPT", "extra_pnginfo": "EXTRA_PNGINFO"},
         }
 
-    RETURN_TYPES = ("STRING",)
-    RETURN_NAMES = ("Output_Directory",)
+    RETURN_TYPES = ()
     FUNCTION = "save_images"
     OUTPUT_NODE = True
     CATEGORY = "🌻 Addoor/Image"
 
-    def save_images(self, Images, Directory, Filename_Prefix, Open_Output_Directory, prompt=None, extra_pnginfo=None):
+    def save_images(self, images, folder, filename_prefix, overwrite_warning, include_metadata, 
+                   extension, quality, open_output_directory, filename_opt=None, prompt=None, extra_pnginfo=None):
         try:
-            os.makedirs(Directory, exist_ok=True)
+            # 处理保存路径
+            if folder:
+                # 如果提供了文件夹路径，从 ComfyUI 根目录开始
+                comfy_path = os.path.dirname(self.output_dir)  # 获取 ComfyUI 根目录
+                full_output_folder = os.path.join(comfy_path, folder)
+            else:
+                # 如果没有提供，使用默认输出目录
+                full_output_folder = self.output_dir
 
-            saved_paths = []
-            for i, image in enumerate(Images):
-                image = image.cpu().numpy()
-                image = (image * 255).astype(np.uint8)
-                img = Image.fromarray(image)
+            os.makedirs(full_output_folder, exist_ok=True)
+            results = list()
 
-                metadata = PngInfo()
-                if prompt is not None:
-                    metadata.add_text("prompt", json.dumps(prompt))
-                if extra_pnginfo is not None:
-                    for x in extra_pnginfo:
-                        metadata.add_text(x, json.dumps(extra_pnginfo[x]))
+            for batch_number, image in enumerate(images):
+                i = 255. * image.cpu().numpy()
+                img = Image.fromarray(np.clip(i, 0, 255).astype(np.uint8))
+                metadata = None
 
-                file_path = self.get_next_file_path(Directory, Filename_Prefix)
-                img.save(file_path, pnginfo=metadata, compress_level=self.compression)
-                saved_paths.append(file_path)
+                if not filename_opt:
+                    filename_with_batch_num = filename_prefix.replace("%batch_num%", str(batch_number))
+                    counter = 1
 
-            print(f"Saved {len(saved_paths)} images to {Directory}")
+                    if os.path.exists(full_output_folder) and os.listdir(full_output_folder):
+                        filtered_filenames = list(filter(
+                            lambda filename: filename.startswith(filename_with_batch_num + "_")
+                            and filename[len(filename_with_batch_num) + 1:-4].isdigit(),
+                            os.listdir(full_output_folder)
+                        ))
 
-            if Open_Output_Directory:
-                self.open_directory(Directory)
+                        if filtered_filenames:
+                            max_counter = max(
+                                int(filename[len(filename_with_batch_num) + 1:-4])
+                                for filename in filtered_filenames
+                            )
+                            counter = max_counter + 1
 
-            return (Directory,)
+                    file = f"{filename_with_batch_num}_{counter:05}.{extension}"
+                else:
+                    if len(images) == 1:
+                        file = f"{filename_opt}.{extension}"
+                    else:
+                        raise Exception("Multiple images and filename detected: Images will overwrite themselves!")
+
+                save_path = os.path.join(full_output_folder, file)
+
+                if os.path.exists(save_path) and overwrite_warning:
+                    raise Exception("Filename already exists.")
+                else:
+                    if extension == "png":
+                        if include_metadata:
+                            metadata = PngInfo()
+                            if prompt is not None:
+                                metadata.add_text("prompt", json.dumps(prompt))
+                            if extra_pnginfo is not None:
+                                for x in extra_pnginfo:
+                                    metadata.add_text(x, json.dumps(extra_pnginfo[x]))
+                        img.save(save_path, pnginfo=metadata, compress_level=self.compression)
+                    else:  # jpg
+                        if include_metadata:
+                            metadata = {}
+                            if prompt is not None:
+                                metadata["prompt"] = prompt
+                            if extra_pnginfo is not None:
+                                for key, value in extra_pnginfo.items():
+                                    metadata[key] = value
+                                metadata_json = json.dumps(metadata)
+                                img.info["comment"] = metadata_json
+                        img.save(save_path, quality=quality)
+
+                # 计算相对路径用于预览
+                subfolder = os.path.relpath(full_output_folder, self.output_dir) if folder else ""
+                results.append({
+                    "filename": file,
+                    "subfolder": subfolder,
+                    "type": self.type
+                })
+
+            if open_output_directory:
+                self.open_directory(full_output_folder)
+
+            return {"ui": {"images": results}}
 
         except Exception as e:
             print(f"Error saving images: {e}")
-            return ("",)
-
-    @staticmethod
-    def get_next_file_path(directory, filename_prefix):
-        index = 1
-        while True:
-            file_name = f"{filename_prefix}_{str(index).zfill(4)}.png"
-            file_path = os.path.join(directory, file_name)
-            if not os.path.exists(file_path):
-                return file_path
-            index += 1
+            return {"ui": {"images": []}}
 
     @staticmethod
     def open_directory(path):

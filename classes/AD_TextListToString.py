@@ -20,7 +20,7 @@ class AD_TextListToString:
     OUTPUT_IS_LIST = (True, True, True, True, False, False)
     CATEGORY = "🌻 Addoor/Batch"
 
-    def load_text_files(self, Directory, Load_Cap, Skip_Frame):
+    def load_text_files(self, Directory, Load_Cap, Skip_Frame, seed):
         text_extensions = ['.txt', '.csv']
         file_paths = []
         for root, dirs, files in os.walk(Directory):

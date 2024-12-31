@@ -12,6 +12,9 @@ class AD_CSVReader:
                 "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
                 "increment": ("INT", {"default": 1, "min": -1000, "max": 1000}),
             },
+            "optional": {
+                "index": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "forceInput": True, "tooltip": "Start from this row (0 or 1 for first row)"}),
+            }
         }
 
     RETURN_TYPES = ("STRING", "INT", "INT", "STRING", "STRING", "INT", "STRING")
@@ -24,7 +27,7 @@ class AD_CSVReader:
     def __init__(self):
         self.current_index = None
 
-    def read_csv(self, file_path, column_index, seed, increment):
+    def read_csv(self, file_path, column_index, seed, increment, index=None):
         if not os.path.exists(file_path):
             return file_path, seed, increment, f"Error: File not found at {file_path}", [], 0, ""
 
@@ -45,8 +48,12 @@ class AD_CSVReader:
 
                 full_content = '\n'.join(processed_lines)
 
-                # Initialize current_index if it's None
-                if self.current_index is None:
+                # Initialize or update current_index based on the new 'index' input
+                if index is not None:
+                    # Adjust index to start from 0 internally, but treat 0 and 1 as the first row
+                    adjusted_index = max(0, index - 1)
+                    self.current_index = adjusted_index % len(processed_lines)
+                elif self.current_index is None:
                     if increment == 0:
                         # Random starting point
                         random.seed(seed)
@@ -54,6 +61,8 @@ class AD_CSVReader:
                     else:
                         # Start from the beginning
                         self.current_index = 0
+
+                print(f"DEBUG: Current index set to {self.current_index}")
 
                 # Select a line based on increment
                 if increment == 0:
