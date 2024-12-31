@@ -23,8 +23,8 @@ class RunningHubWorkflowExecutorNode:
             }
         }
     
-    RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING")
-    RETURN_NAMES = ("task_id", "msg", "promptTips", "taskStatus", "fileUrl", "fileType", "code", "json")
+    RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "FILEURL_LIST", "STRING", "STRING", "STRING")
+    RETURN_NAMES = ("task_id", "msg", "promptTips", "taskStatus", "fileUrls", "fileType", "code", "json")
     FUNCTION = "execute_workflow_and_monitor"
     CATEGORY = "🌻 Addoor/RHAPI"
     
@@ -32,6 +32,23 @@ class RunningHubWorkflowExecutorNode:
         if not validate_api_key(api_key):
             raise ValueError("Invalid API key")
             
+        # 确保 node_info_list 是列表类型
+        if not isinstance(node_info_list, list):
+            node_info_list = [node_info_list]
+        
+        # 移除可能的重复项
+        unique_node_info = {
+            (info.get('nodeId'), info.get('fieldName')): info 
+            for info in node_info_list
+        }.values()
+        
+        workflow_data = {
+            "workflowId": int(workflow_id),
+            "apiKey": api_key,
+            "nodeInfoList": list(unique_node_info),
+            "seed": seed
+        }
+        
         headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
@@ -39,14 +56,6 @@ class RunningHubWorkflowExecutorNode:
             "Accept": "*/*",
             "Host": "www.runninghub.cn",
             "Connection": "keep-alive"
-        }
-        
-        # Execute workflow
-        workflow_data = {
-            "workflowId": int(workflow_id),
-            "apiKey": api_key,
-            "nodeInfoList": node_info_list,
-            "seed": seed
         }
         
         workflow_endpoint = f"{BASE_URL}/task/openapi/create"
@@ -113,19 +122,30 @@ class RunningHubWorkflowExecutorNode:
             # Prepare return values
             msg = workflow_result.get('msg', '')
             prompt_tips = json.dumps(workflow_result.get('data', {}).get('promptTips', ''))
-            file_url = task_result['data'][0].get('fileUrl', '') if task_result and 'data' in task_result and task_result['data'] else ''
+            
+            # 处理多个文件URL
+            file_urls = []
+            if task_result and 'data' in task_result and task_result['data']:
+                for item in task_result['data']:
+                    if 'fileUrl' in item:
+                        file_urls.append(item['fileUrl'])
+            
+            # 如果没有文件URL，添加空字符串
+            if not file_urls:
+                file_urls = [""]
+                
             file_type = task_result['data'][0].get('fileType', '') if task_result and 'data' in task_result and task_result['data'] else ''
             code = str(task_result.get('code', '')) if task_result else ''
             
-            return (task_id, msg, prompt_tips, task_status, file_url, file_type, code, json.dumps(task_result))
+            return (task_id, msg, prompt_tips, task_status, file_urls, file_type, code, json.dumps(task_result))
         
         except requests.exceptions.RequestException as e:
             logger.error(f"API request failed: {str(e)}")
-            return ("", f"Error: {str(e)}", "{}", "ERROR", "", "", "error", "")
+            return ("", f"Error: {str(e)}", "{}", "ERROR", [""], "", "error", "")
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse JSON response: {str(e)}")
-            return ("", f"Error: Invalid JSON response", "{}", "ERROR", "", "", "error", "")
+            return ("", f"Error: Invalid JSON response", "{}", "ERROR", [""], "", "error", "")
         except Exception as e:
             logger.error(f"Unexpected error: {str(e)}")
-            return ("", f"Error: {str(e)}", "{}", "ERROR", "", "", "error", "")
+            return ("", f"Error: {str(e)}", "{}", "ERROR", [""], "", "error", "")
 

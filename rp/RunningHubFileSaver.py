@@ -22,7 +22,7 @@ class RunningHubFileSaverNode:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "file_url": ("STRING", {"default": ""}),
+                "file_urls": ("FILEURL_LIST",),
                 "directory": ("STRING", {"default": "outputs"}),
                 "filename_prefix": ("STRING", {"default": "RH_Output"}),
                 "filename_delimiter": ("STRING", {"default": "_"}),
@@ -33,11 +33,60 @@ class RunningHubFileSaverNode:
         }
 
     RETURN_TYPES = ("STRING", "IMAGE", "STRING")
-    RETURN_NAMES = ("output_path", "preview", "file_type")
-    FUNCTION = "save_file"
+    RETURN_NAMES = ("output_paths", "previews", "file_types")
+    FUNCTION = "save_files"
     CATEGORY = "🌻 Addoor/RHAPI"
 
-    def save_file(self, file_url, directory, filename_prefix, filename_delimiter, filename_number_padding, file_extension, open_output_directory):
+    def save_files(self, file_urls, directory, filename_prefix, filename_delimiter, filename_number_padding, file_extension, open_output_directory):
+        output_paths = []
+        previews = []
+        file_types = []
+        
+        try:
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+                
+            for url in file_urls:
+                if not url:
+                    continue
+                    
+                result = self.save_single_file(
+                    url, 
+                    directory, 
+                    filename_prefix, 
+                    filename_delimiter, 
+                    filename_number_padding, 
+                    file_extension
+                )
+                
+                if result:
+                    path, preview, ftype = result
+                    output_paths.append(path)
+                    previews.append(preview)
+                    file_types.append(ftype)
+            
+            if open_output_directory and output_paths:
+                self.open_directory(directory)
+            
+            if not output_paths:
+                return ("", torch.zeros((1, 1, 1, 3)), "")
+                
+            if len(previews) > 1:
+                combined_preview = torch.cat(previews, dim=0)
+            else:
+                combined_preview = previews[0] if previews else torch.zeros((1, 1, 1, 3))
+                
+            return (
+                json.dumps(output_paths), 
+                combined_preview,
+                json.dumps(file_types)
+            )
+            
+        except Exception as e:
+            logger.error(f"Error saving files: {str(e)}")
+            return ("", torch.zeros((1, 1, 1, 3)), "")
+
+    def save_single_file(self, file_url, directory, filename_prefix, filename_delimiter, filename_number_padding, file_extension):
         try:
             logger.info(f"Attempting to save file from URL: {file_url}")
             
@@ -92,9 +141,6 @@ class RunningHubFileSaverNode:
                 preview = torch.zeros((1, 1, 1, 3))  # Placeholder for other file types
 
             logger.info(f"File saved successfully to {file_path}")
-
-            if open_output_directory:
-                self.open_directory(directory)
 
             return (file_path, preview, file_extension)
 
