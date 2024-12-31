@@ -1,0 +1,500 @@
+{
+  "last_node_id": 11,
+  "last_link_id": 8,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "RunningHubWorkflowExecutor",
+      "pos": [
+        1814.84912109375,
+        670.4561157226562
+      ],
+      "size": [
+        352.79998779296875,
+        318
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "node_info_list",
+          "type": "NODEINFOLIST",
+          "link": 2,
+          "label": "node_info_list"
+        },
+        {
+          "name": "api_key",
+          "type": "STRING",
+          "link": 1,
+          "widget": {
+            "name": "api_key"
+          },
+          "label": "api_key"
+        },
+        {
+          "name": "workflow_id",
+          "type": "STRING",
+          "link": 4,
+          "widget": {
+            "name": "workflow_id"
+          },
+          "label": "workflow_id"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "file_urls",
+          "type": "FILEURL_LIST",
+          "links": [
+            5
+          ],
+          "label": "file_urls",
+          "slot_index": 0
+        },
+        {
+          "name": "task_id",
+          "type": "STRING",
+          "links": null,
+          "label": "task_id"
+        },
+        {
+          "name": "msg",
+          "type": "STRING",
+          "links": null,
+          "label": "msg"
+        },
+        {
+          "name": "promptTips",
+          "type": "STRING",
+          "links": null,
+          "label": "promptTips"
+        },
+        {
+          "name": "taskStatus",
+          "type": "STRING",
+          "links": null,
+          "label": "taskStatus"
+        },
+        {
+          "name": "fileType",
+          "type": "STRING",
+          "links": null,
+          "label": "fileType"
+        },
+        {
+          "name": "code",
+          "type": "STRING",
+          "links": null,
+          "label": "code"
+        },
+        {
+          "name": "json",
+          "type": "STRING",
+          "links": null,
+          "label": "json"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHubWorkflowExecutor"
+      },
+      "widgets_values": [
+        "",
+        "",
+        34390019738778,
+        "randomize",
+        60,
+        5
+      ]
+    },
+    {
+      "id": 9,
+      "type": "RunningHubImageUploader",
+      "pos": [
+        621.948974609375,
+        753.6560668945312
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "filename",
+          "type": "STRING",
+          "links": null,
+          "label": "filename"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHubImageUploader"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 6,
+      "type": "RunningHubWorkflowID",
+      "pos": [
+        1438.5477294921875,
+        882.5560913085938
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            4
+          ],
+          "slot_index": 0,
+          "label": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHubWorkflowID"
+      },
+      "widgets_values": [
+        "1867408429454426113"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "RunningHubAccountStatus",
+      "pos": [
+        1819.9490966796875,
+        1044.7562255859375
+      ],
+      "size": [
+        341,
+        54
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "api_key",
+          "type": "STRING",
+          "link": 3,
+          "widget": {
+            "name": "api_key"
+          },
+          "label": "api_key"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "remain_coins",
+          "type": "INT",
+          "links": null,
+          "label": "remain_coins",
+          "slot_index": 0
+        },
+        {
+          "name": "current_task_counts",
+          "type": "INT",
+          "links": null,
+          "label": "current_task_counts"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHubAccountStatus"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 8,
+      "type": "RunningHubNodeInfoReplace",
+      "pos": [
+        1024.0535888671875,
+        956.73486328125
+      ],
+      "size": [
+        400,
+        338
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "node_info",
+          "type": "NODEINFO",
+          "links": null,
+          "label": "node_info"
+        },
+        {
+          "name": "new_seed",
+          "type": "INT",
+          "links": null,
+          "label": "new_seed"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHubNodeInfoReplace"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        842958099223905,
+        "randomize",
+        1,
+        "normal"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "PreviewImage",
+      "pos": [
+        2522.2890625,
+        673.9710693359375
+      ],
+      "size": [
+        355.91650390625,
+        358.8138427734375
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 5,
+      "type": "RunningHubFileSaver",
+      "pos": [
+        2187.75634765625,
+        669.653564453125
+      ],
+      "size": [
+        315,
+        218
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "file_urls",
+          "type": "FILEURL_LIST",
+          "link": 5,
+          "label": "file_urls"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_paths",
+          "type": "STRING",
+          "links": [],
+          "label": "output_paths",
+          "slot_index": 0
+        },
+        {
+          "name": "previews",
+          "type": "IMAGE",
+          "links": [
+            8
+          ],
+          "label": "previews",
+          "slot_index": 1
+        },
+        {
+          "name": "file_types",
+          "type": "STRING",
+          "links": null,
+          "label": "file_types"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHubFileSaver"
+      },
+      "widgets_values": [
+        "outputs",
+        "RH_Output",
+        "_",
+        4,
+        "auto",
+        false
+      ]
+    },
+    {
+      "id": 1,
+      "type": "RunningHubInit",
+      "pos": [
+        1439.84912109375,
+        768.4561157226562
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            1,
+            3
+          ],
+          "slot_index": 0,
+          "label": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHubInit"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 2,
+      "type": "RunningHubNodeInfo",
+      "pos": [
+        1021.8431396484375,
+        672.1781005859375
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "previous_node_info",
+          "type": "NODEINFOLIST",
+          "link": null,
+          "shape": 7,
+          "label": "previous_node_info"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NODEINFOLIST",
+          "type": "NODEINFOLIST",
+          "links": [
+            2
+          ],
+          "slot_index": 0,
+          "label": "NODEINFOLIST"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHubNodeInfo"
+      },
+      "widgets_values": [
+        "6",
+        "text",
+        "3D Snake,Wearing light gray clothes,with a gold necklace,glasses,smiling face,light background,high-definitiona,gold necklace sign on its neck that reads \"2025.\" The picture is in the middle. Fireworks in the sky,red background,3D,C4D,",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      1,
+      "STRING"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "NODEINFOLIST"
+    ],
+    [
+      3,
+      1,
+      0,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      6,
+      0,
+      3,
+      2,
+      "STRING"
+    ],
+    [
+      5,
+      3,
+      0,
+      5,
+      0,
+      "FILEURL_LIST"
+    ],
+    [
+      8,
+      5,
+      1,
+      11,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8264462809917354,
+      "offset": [
+        -509.6418520759915,
+        -255.05204017404154
+      ]
+    }
+  },
+  "version": 0.4
+}
