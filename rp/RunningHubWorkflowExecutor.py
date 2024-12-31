@@ -23,8 +23,8 @@ class RunningHubWorkflowExecutorNode:
             }
         }
     
-    RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "FILEURL_LIST", "STRING", "STRING", "STRING")
-    RETURN_NAMES = ("task_id", "msg", "promptTips", "taskStatus", "fileUrls", "fileType", "code", "json")
+    RETURN_TYPES = ("FILEURL_LIST", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING")
+    RETURN_NAMES = ("file_urls", "task_id", "msg", "promptTips", "taskStatus", "fileType", "code", "json")
     FUNCTION = "execute_workflow_and_monitor"
     CATEGORY = "🌻 Addoor/RHAPI"
     
@@ -137,15 +137,15 @@ class RunningHubWorkflowExecutorNode:
             file_type = task_result['data'][0].get('fileType', '') if task_result and 'data' in task_result and task_result['data'] else ''
             code = str(task_result.get('code', '')) if task_result else ''
             
-            return (task_id, msg, prompt_tips, task_status, file_urls, file_type, code, json.dumps(task_result))
+            return (file_urls, task_id, msg, prompt_tips, task_status, file_type, code, json.dumps(task_result))
         
         except requests.exceptions.RequestException as e:
             logger.error(f"API request failed: {str(e)}")
-            return ("", f"Error: {str(e)}", "{}", "ERROR", [""], "", "error", "")
+            return ([""], "", f"Error: {str(e)}", "{}", "ERROR", "", "error", "")
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse JSON response: {str(e)}")
-            return ("", f"Error: Invalid JSON response", "{}", "ERROR", [""], "", "error", "")
+            return ([""], "", f"Error: Invalid JSON response", "{}", "ERROR", "", "error", "")
         except Exception as e:
             logger.error(f"Unexpected error: {str(e)}")
-            return ("", f"Error: {str(e)}", "{}", "ERROR", [""], "", "error", "")
+            return ([""], "", f"Error: {str(e)}", "{}", "ERROR", "", "error", "")
 
