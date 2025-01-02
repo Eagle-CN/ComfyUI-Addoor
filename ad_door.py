@@ -15,6 +15,7 @@ from .classes.AD_CSVTranslator import AD_CSVTranslator
 from .classes.AD_LoadImageAdvanced import AD_LoadImageAdvanced
 from .classes.AD_ImageDrawRectangleSimple import AD_ImageDrawRectangleSimple
 from .classes.AD_ImageIndexer import AD_ImageIndexer
+from .classes.AD_TextIndexer import AD_TextIndexer
 
 NODE_CLASS_MAPPINGS = {
     "AD_BatchImageLoadFromDir": AD_BatchImageLoadFromDir,
@@ -34,6 +35,7 @@ NODE_CLASS_MAPPINGS = {
     "AD_LoadImageAdvanced": AD_LoadImageAdvanced,
     "AD_ImageDrawRectangleSimple": AD_ImageDrawRectangleSimple,
     "AD_ImageIndexer": AD_ImageIndexer,
+    "AD_TextIndexer": AD_TextIndexer,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -54,6 +56,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "AD_LoadImageAdvanced": "🌻 Load Image Advanced",
     "AD_ImageDrawRectangleSimple": "🌻 Draw Simple Rectangle",
     "AD_ImageIndexer": "🌻 Image Indexer",
+    "AD_TextIndexer": "🌻 Text Indexer",
 }
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
