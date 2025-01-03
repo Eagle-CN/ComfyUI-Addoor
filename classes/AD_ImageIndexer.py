@@ -1,6 +1,10 @@
 import random
+import os
 
 class AD_ImageIndexer:
+    # 定义需要忽略的系统文件
+    IGNORED_FILES = {'.DS_Store', 'Thumbs.db', '.gitignore', 'desktop.ini'}
+    
     def __init__(self):
         self.current_index = None
 
@@ -13,6 +17,7 @@ class AD_ImageIndexer:
                 "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
             },
             "optional": {
+                "image_names": ("STRING", {"forceInput": True}),
                 "index": ("INT", {
                     "default": 0, 
                     "min": 0, 
@@ -23,15 +28,27 @@ class AD_ImageIndexer:
             }
         }
 
-    RETURN_TYPES = ("IMAGE", "INT", "INT")
-    RETURN_NAMES = ("image", "current_index", "total_images")
+    RETURN_TYPES = ("IMAGE", "STRING", "INT", "INT")
+    RETURN_NAMES = ("image", "image_name", "current_index", "total_images")
     FUNCTION = "index_image"
     CATEGORY = "🌻 Addoor/Batch"
     INPUT_IS_LIST = True
 
-    def index_image(self, images, increment, seed, index=None):
+    def filter_system_files(self, names):
+        """过滤系统文件"""
+        if names is None:
+            return None
+        return [name for name in names if os.path.basename(name) not in self.IGNORED_FILES]
+
+    def index_image(self, images, increment, seed, image_names=None, index=None):
         if not isinstance(images, list):
             images = [images]
+            
+        # 过滤系统文件
+        if image_names is not None:
+            if not isinstance(image_names, list):
+                image_names = [image_names]
+            image_names = self.filter_system_files(image_names)
         
         # 确保increment和seed是整数
         increment = int(increment[0] if isinstance(increment, list) else increment)
@@ -66,5 +83,9 @@ class AD_ImageIndexer:
             self.current_index = (self.current_index + increment) % total_images
 
         selected_image = images[selected_index]
-        return (selected_image, selected_index, total_images)
+        # 如果没有提供名称列表，使用索引作为名称
+        selected_name = (image_names[selected_index] if image_names and selected_index < len(image_names) 
+                        else f"image_{selected_index}")
+        
+        return (selected_image, selected_name, selected_index, total_images)
 
