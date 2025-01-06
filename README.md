@@ -165,6 +165,4 @@ pip install -r requirements.txt
 
 ## Star History
 
-## Star History
-
 [![Star History Chart](https://api.star-history.com/svg?repos=Eagle-CN/ComfyUI-Addoor&type=Date)](https://star-history.com/#Eagle-CN/ComfyUI-Addoor&Date)
