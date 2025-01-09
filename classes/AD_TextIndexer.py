@@ -1,4 +1,10 @@
+import random
+import os
+
 class AD_TextIndexer:
+    # Define system files to ignore
+    IGNORED_FILES = {'.DS_Store', 'Thumbs.db', '.gitignore', 'desktop.ini'}
+    
     def __init__(self):
         self.current_index = None
 
@@ -6,11 +12,12 @@ class AD_TextIndexer:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "texts": ("STRING", {"forceInput": True}),  # 改为文本列表输入
+                "texts": ("STRING", {"forceInput": True}),
                 "increment": ("INT", {"default": 1, "min": 0, "max": 1000, "step": 1}),
                 "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
             },
             "optional": {
+                "file_names": ("STRING", {"forceInput": True}),
                 "index": ("INT", {
                     "default": 0, 
                     "min": 0, 
@@ -21,15 +28,27 @@ class AD_TextIndexer:
             }
         }
 
-    RETURN_TYPES = ("STRING", "INT", "INT")
-    RETURN_NAMES = ("text", "current_index", "total_texts")
+    RETURN_TYPES = ("STRING", "STRING", "INT", "INT")
+    RETURN_NAMES = ("text", "file_name", "current_index", "total_texts")
     FUNCTION = "index_text"
     CATEGORY = "🌻 Addoor/Batch"
-    INPUT_IS_LIST = True  # 表示输入是列表
+    INPUT_IS_LIST = True
 
-    def index_text(self, texts, increment, seed, index=None):
+    def filter_system_files(self, names):
+        """Filter out system files"""
+        if names is None:
+            return None
+        return [name for name in names if os.path.basename(name) not in self.IGNORED_FILES]
+
+    def index_text(self, texts, increment, seed, file_names=None, index=None):
         if not isinstance(texts, list):
             texts = [texts]
+            
+        # 筛选系统文件
+        if file_names is not None:
+            if not isinstance(file_names, list):
+                file_names = [file_names]
+            file_names = self.filter_system_files(file_names)
         
         # 确保increment和seed是整数
         increment = int(increment[0] if isinstance(increment, list) else increment)
@@ -48,7 +67,6 @@ class AD_TextIndexer:
         elif self.current_index is None:
             if increment == 0:
                 # 随机起点
-                import random
                 random.seed(seed)
                 self.current_index = random.randint(0, total_texts - 1)
             else:
@@ -57,7 +75,6 @@ class AD_TextIndexer:
 
         if increment == 0:
             # 使用种子进行随机选择
-            import random
             random.seed(seed)
             selected_index = random.randint(0, total_texts - 1)
         else:
@@ -66,4 +83,9 @@ class AD_TextIndexer:
             self.current_index = (self.current_index + increment) % total_texts
 
         selected_text = texts[selected_index]
-        return (selected_text, selected_index, total_texts) 
+        # 如果未提供文件名列表，请使用索引作为名称
+        selected_file_name = (file_names[selected_index] if file_names and selected_index < len(file_names) 
+                              else f"text_{selected_index}")
+        
+        return (selected_text, selected_file_name, selected_index, total_texts)
+
