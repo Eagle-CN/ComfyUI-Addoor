@@ -185,7 +185,7 @@ class AD_ImageConcat:
     
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "concat_images"
-    CATEGORY = "AD/image"
+    CATEGORY = "🌻 Addoor/image"
 
     def concat_images(self, image1, image2, direction="horizontal", match_size=False, method="lanczos"):
         try:
@@ -358,7 +358,7 @@ class AD_ColorImage:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("image",)
     FUNCTION = "create_color_image"
-    CATEGORY = "AD/image"
+    CATEGORY = "🌻 Addoor/image"
 
     def hex_to_rgb(self, hex_color: str) -> tuple:
         """Convert hex color to RGB tuple."""
