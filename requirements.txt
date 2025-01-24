@@ -29,3 +29,6 @@ pycryptodome>=3.15.0
 configparser>=5.0.0
 filelock>=3.0.12
 
+# OpenAI API client
+openai>=1.0.0
+
